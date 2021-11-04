@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ctppr1goyvg3p"]
+
+[ext_resource type="Texture2D" uid="uid://d4c3p5h120tul" path="res://assets/theme/button/red-normal-32x37.png" id="1_kjalk"]
+
+[resource]
+texture = ExtResource( "1_kjalk" )
+region_rect = Rect2(0, 0, 32, 37)
+margin_left = 8.0
+margin_right = 8.0
+margin_top = 8.0
+margin_bottom = 12.0

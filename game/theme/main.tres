@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://3jk5cncrjgh2"]
+
+[ext_resource type="Font" uid="uid://woqrkj461ijl" path="res://font/normal/font.tres" id="1_3bm0p"]
+[ext_resource type="StyleBox" uid="uid://ccm6mhr2xuhw4" path="res://theme/button/green-disabled.tres" id="1_ds1n3"]
+[ext_resource type="StyleBox" uid="uid://ulsyqwtl0334" path="res://theme/button/green-hover.tres" id="2_44khp"]
+[ext_resource type="StyleBox" uid="uid://dv1w7fn8sfh20" path="res://theme/button/green-normal.tres" id="3_yv6sd"]
+[ext_resource type="StyleBox" uid="uid://clyydo44waco" path="res://theme/button/green-pressed.tres" id="4_l8q6f"]
+
+[resource]
+default_font = ExtResource( "1_3bm0p" )
+default_font_size = 16
+Button/colors/font_color = Color(0.792157, 0.905882, 0.890196, 1)
+Button/colors/font_disabled_color = Color(0.580392, 0.807843, 0.780392, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.0862745, 0.317647, 0.290196, 1)
+Button/colors/font_hover_pressed_color = Color(0.792157, 0.905882, 0.890196, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.792157, 0.905882, 0.890196, 1)
+Button/colors/icon_disabled_color = Color(0, 0, 0, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/styles/disabled = ExtResource( "1_ds1n3" )
+Button/styles/focus = null
+Button/styles/hover = ExtResource( "2_44khp" )
+Button/styles/normal = ExtResource( "3_yv6sd" )
+Button/styles/pressed = ExtResource( "4_l8q6f" )

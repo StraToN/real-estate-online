@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbqkwfd6db1rp"]
+
+[ext_resource type="Script" path="res://script/soundfx-manager.gd" id="2_slm2w"]
+
+[node name="main" type="Node"]
+script = ExtResource( "2_slm2w" )

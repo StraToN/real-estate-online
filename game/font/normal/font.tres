@@ -1,0 +1,8 @@
+[gd_resource type="Font" load_steps=3 format=3 uid="uid://woqrkj461ijl"]
+
+[ext_resource type="FontData" uid="uid://k3ykiv6b7v5e" path="res://font/normal/font.ttf" id="1_op10l"]
+[ext_resource type="FontData" uid="uid://kimv6wkbifnp" path="res://font/font-schinese.ttf" id="2_xqeql"]
+
+[resource]
+data/0 = ExtResource( "1_op10l" )
+data/1 = ExtResource( "2_xqeql" )

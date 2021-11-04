@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://mqx4fpx7ri2m"]
+
+[ext_resource type="Texture2D" uid="uid://bfwo1mh6som71" path="res://assets/theme/button/red-disabled-32x37.png" id="1_ntxj6"]
+
+[resource]
+texture = ExtResource( "1_ntxj6" )
+region_rect = Rect2(0, 0, 32, 37)
+margin_left = 8.0
+margin_right = 8.0
+margin_top = 8.0
+margin_bottom = 12.0

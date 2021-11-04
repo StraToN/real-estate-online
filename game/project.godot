@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Real Estate Online - The multiplayer board game"
+config/description="A monopoly like FOSS game"
+run/main_scene="res://scene/main.tscn"
+config/icon="res://icon.png"
+config/auto_accept_quit=false
+
+[autoload]
+
+soundfx_manager="*res://scene/soundfx-manager.tscn"
+logger="*res://script/logger.gd"
+
+[debug]
+
+file_logging/max_log_files=10
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
+[editor]
+
+node_naming/name_casing=1
+
+[importer_defaults]
+
+wav={
+"edit/normalize": true,
+"force/max_rate": true
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://i18n/translations.en.translation", "res://i18n/translations.fr.translation")
+locale/translation_remaps={
+}
+locale/locale_filter=[1, ["en", "fr", "fr_FR"]]
+
+[rendering]
+
+environment/defaults/default_environment="res://default_env.tres"

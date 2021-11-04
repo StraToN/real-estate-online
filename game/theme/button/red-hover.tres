@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bu67f3nbrlayl"]
+
+[ext_resource type="Texture2D" uid="uid://b68kjpswovy27" path="res://assets/theme/button/red-hover-32x37.png" id="1_osm6t"]
+
+[resource]
+texture = ExtResource( "1_osm6t" )
+region_rect = Rect2(0, 0, 32, 37)
+margin_left = 8.0
+margin_right = 8.0
+margin_top = 8.0
+margin_bottom = 12.0

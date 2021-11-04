@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="theme-basic-shapes.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#e0e0e0"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="-1383.6264"
+     inkscape:cy="-1416.2674"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     units="px"
+     inkscape:pagecheckerboard="false"
+     showborder="false"
+     inkscape:showpageshadow="false"
+     objecttolerance="10000"
+     inkscape:snap-path-clip="true"
+     inkscape:snap-path-mask="true"
+     guidetolerance="10000"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1357"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1470" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:100%;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-119.45267"
+       y="91.346153"
+       id="text867"><tspan
+         sodipodi:role="line"
+         id="tspan865"
+         x="-119.45267"
+         y="91.346153"
+         style="stroke-width:0.264583px" /><tspan
+         sodipodi:role="line"
+         x="-119.45267"
+         y="94.873924"
+         style="stroke-width:0.264583px"
+         id="tspan869" /><tspan
+         sodipodi:role="line"
+         x="-119.45267"
+         y="98.401695"
+         style="stroke-width:0.264583px"
+         id="tspan871" /><tspan
+         sodipodi:role="line"
+         x="-119.45267"
+         y="101.92947"
+         style="stroke-width:0.264583px"
+         id="tspan873" /><tspan
+         sodipodi:role="line"
+         x="-119.45267"
+         y="105.45723"
+         style="stroke-width:0.264583px"
+         id="tspan875" /><tspan
+         sodipodi:role="line"
+         x="-119.45267"
+         y="108.985"
+         style="stroke-width:0.264583px"
+         id="tspan877" /></text>
+    <g
+       id="g1538"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/red-normal-32x37.png"
+       inkscape:export-xdpi="102.4"
+       inkscape:export-ydpi="102.4">
+      <rect
+         style="fill:#f3b7a8;stroke:none;stroke-width:1"
+         id="rect1526"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#e76f51;stroke:none;stroke-width:1"
+         id="rect1524"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1534"
+       transform="translate(17.197917,-1.0172526e-5)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/red-pressed-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#e76f51;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1528"
+         width="7.9375"
+         height="7.9375"
+         x="-373.0625"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1530"
+         width="7.9375"
+         height="7.9375"
+         x="-373.0625"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1544"
+       transform="translate(18.520844,-1.0172526e-5)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/red-disabled-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#88685f;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1540"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#433531;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1542"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1550"
+       transform="translate(9.2604268)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/red-hover-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#e76f51;stroke:none;stroke-width:1"
+         id="rect1546"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#f3b7a8;stroke:none;stroke-width:1"
+         id="rect1548"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1556"
+       transform="translate(1.0172526e-5,10.583333)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/green-normal-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#cae7e3;stroke:none;stroke-width:1"
+         id="rect1552"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#2a9d8f;stroke:none;stroke-width:1"
+         id="rect1554"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1562"
+       transform="translate(17.197917,10.583323)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/green-pressed-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#2a9d8f;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1558"
+         width="7.9375"
+         height="7.9375"
+         x="-373.0625"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1560"
+         width="7.9375"
+         height="7.9375"
+         x="-373.0625"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1568"
+       transform="translate(18.520844,10.583333)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/green-disabled-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#7b9d99;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1564"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#3e514f;fill-opacity:1;stroke:none;stroke-width:1"
+         id="rect1566"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+    <g
+       id="g1574"
+       transform="translate(9.2604268,10.583333)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/assets/theme/button/green-hover-32x37.png"
+       inkscape:export-xdpi="102"
+       inkscape:export-ydpi="102">
+      <rect
+         style="fill:#2a9d8f;stroke:none;stroke-width:1"
+         id="rect1570"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-384.96875"
+         rx="1.3229065"
+         ry="1.3229065" />
+      <rect
+         style="fill:#cae7e3;stroke:none;stroke-width:1"
+         id="rect1572"
+         width="7.9375"
+         height="7.9375"
+         x="-383.64584"
+         y="-386.29166"
+         rx="1.3229065"
+         ry="1.3229065" />
+    </g>
+  </g>
+</svg>
