@@ -1,0 +1,1357 @@
+[gd_scene load_steps=40 format=3 uid="uid://b0hr4kvypmqqu"]
+
+[ext_resource type="Environment" uid="uid://bi6uaod2seyox" path="res://default_env.tres" id="2_7g8dw"]
+[ext_resource type="Font" uid="uid://woqrkj461ijl" path="res://font/normal/font.tres" id="2_beikt"]
+[ext_resource type="ArrayMesh" uid="uid://bp57c14qcu5da" path="res://assets/3d/plateau.tres" id="2_mafsv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1cg8a"]
+viewport_path = NodePath("cities/01/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0grev"]
+viewport_path = NodePath("cities/02/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q4bgn"]
+viewport_path = NodePath("cities/03/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nqgf0"]
+viewport_path = NodePath("cities/04/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pebws"]
+viewport_path = NodePath("cities/05/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_88yns"]
+viewport_path = NodePath("cities/06/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jup6w"]
+viewport_path = NodePath("cities/07/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dbptj"]
+viewport_path = NodePath("cities/08/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yuoy5"]
+viewport_path = NodePath("cities/09/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v58yt"]
+viewport_path = NodePath("cities/10/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nb5tk"]
+viewport_path = NodePath("cities/11/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_eb6sr"]
+viewport_path = NodePath("cities/12/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i7j64"]
+viewport_path = NodePath("cities/13/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hho4i"]
+viewport_path = NodePath("cities/14/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4r17y"]
+viewport_path = NodePath("cities/15/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nesm3"]
+viewport_path = NodePath("cities/16/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xsif5"]
+viewport_path = NodePath("cities/17/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fv0ss"]
+viewport_path = NodePath("cities/18/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mhhws"]
+viewport_path = NodePath("cities/19/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7b001"]
+viewport_path = NodePath("cities/20/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_etyqv"]
+viewport_path = NodePath("cities/21/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h5gls"]
+viewport_path = NodePath("cities/22/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_adotj"]
+viewport_path = NodePath("cities/23/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qmdhp"]
+viewport_path = NodePath("cities/24/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pr35v"]
+viewport_path = NodePath("cities/25/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1usq4"]
+viewport_path = NodePath("cities/26/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hhfid"]
+viewport_path = NodePath("cities/27/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wk73t"]
+viewport_path = NodePath("cities/28/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6rb5p"]
+viewport_path = NodePath("cities/29/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6741k"]
+viewport_path = NodePath("cities/30/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_x2ohm"]
+viewport_path = NodePath("cities/31/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_304ir"]
+viewport_path = NodePath("cities/32/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_uh5l5"]
+viewport_path = NodePath("cities/33/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3h50c"]
+viewport_path = NodePath("cities/34/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_a16ss"]
+viewport_path = NodePath("cities/35/subViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3f66g"]
+viewport_path = NodePath("cities/36/subViewport")
+
+[node name="main" type="Node3D"]
+script = null
+
+[node name="real" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.971533, 0.164182, 0.170789, 0, -0.720914, 0.693025, 0.236906, -0.673296, -0.700391, 0.417894, 5.38921, -6.29452)
+visible = false
+light_energy = 0.89
+shadow_enabled = true
+shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+script = null
+
+[node name="counter" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.974433, -0.168165, 0.149, 0, 0.663169, 0.74847, -0.224679, -0.729334, 0.646214, 1.05672, 4.86582, 4.92231)
+visible = false
+light_color = Color(0.108, 0.2844, 0.36, 1)
+shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+directional_shadow_mode = 0
+directional_shadow_fade_start = 0.0
+directional_shadow_max_distance = 0.0
+directional_shadow_pancake_size = 0.0
+script = null
+
+[node name="camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.544434, -0.83064, 0.116739, 8.88179e-16, 0.139173, 0.990268, -0.838804, -0.539136, 0.0757705, 0.277843, 1.42026, 0.0952806)
+environment = ExtResource( "2_7g8dw" )
+current = true
+script = null
+
+[node name="plateau" type="MeshInstance3D" parent="."]
+mesh = ExtResource( "2_mafsv" )
+surface_material_override/0 = null
+surface_material_override/1 = null
+surface_material_override/2 = null
+surface_material_override/3 = null
+surface_material_override/4 = null
+surface_material_override/5 = null
+surface_material_override/6 = null
+surface_material_override/7 = null
+surface_material_override/8 = null
+surface_material_override/9 = null
+surface_material_override/10 = null
+surface_material_override/11 = null
+surface_material_override/12 = null
+surface_material_override/13 = null
+surface_material_override/14 = null
+script = null
+
+[node name="cities" type="Node3D" parent="."]
+top_level = true
+script = null
+
+[node name="01" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.013367, 0.149403, 0.000117813, 0.000116484, -0.000107855, 0.15, 0.149403, 0.0133671, -0.000106455, 0.899889, 0.0357175, 0.0782166)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_1cg8a" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/01"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/01/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Alger"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="02" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.0373796, 0.145268, 0, 0, 0, 0.15, 0.145268, 0.0373796, 0, 0.874444, 0.0392685, 0.233874)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_0grev" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/02"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/02/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Impôts"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="03" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.0631459, 0.136061, 0, 0, 0, 0.15, 0.136061, 0.0631459, 0, 0.818746, 0.0392685, 0.384574)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_q4bgn" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/03"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/03/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Casablanca"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="04" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.0851033, 0.123521, 0, 0, 0, 0.15, 0.123521, 0.0851034, 0, 0.743758, 0.0392685, 0.522854)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_nqgf0" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/04"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/04/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "ADSL"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="05" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.10698, 0.105144, 0, 0, 0, 0.15, 0.105144, 0.10698, 0, 0.640597, 0.0392685, 0.644214)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_pebws" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/05"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/05/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Dakar"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="06" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.124315, 0.0839398, 0, 0, 0, 0.15, 0.0839398, 0.124315, 0, 0.519327, 0.0392685, 0.745865)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_88yns" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/06"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/06/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Roue"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="07" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.136037, 0.0631982, 0, 0, 0, 0.15, 0.0631982, 0.136037, 0, 0.389905, 0.0392685, 0.82057)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_jup6w" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/07"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/07/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Kinshasa"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="08" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.145141, 0.0378712, 0, 0, 0, 0.15, 0.0378712, 0.145141, 0, 0.227337, 0.0392685, 0.882025)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_dbptj" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/08"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/08/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Le Caire"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="09" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.149215, 0.0153225, 0, 0, 0, 0.15, 0.0153225, 0.149216, 0, 0.0779917, 0.0392685, 0.918667)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_yuoy5" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/09"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/09/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.239216, 0.184314, 0.0470588, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Prison"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="10" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.149415, -0.0132377, 0, 0, 0, 0.15, -0.0132377, 0.149415, 0, -0.083639, 0.0392685, 0.919283)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_v58yt" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/10"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/10/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Bombay"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="11" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.144916, -0.0387217, 0, 0, 0, 0.15, -0.0387217, 0.144916, 0, -0.241793, 0.0392685, 0.890502)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_nb5tk" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/11"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/11/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Roue"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="12" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.136044, -0.0631839, 0, 0, 0, 0.15, -0.0631839, 0.136044, 0, -0.381558, 0.0392685, 0.836858)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_eb6sr" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/12"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/12/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Séoul"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="13" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.123319, -0.0853963, 0, 0, 0, 0.15, -0.0853963, 0.123319, 0, -0.537006, 0.0392685, 0.746241)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_i7j64" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/13"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/13/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Pékin"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="14" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.107272, -0.104847, 0, 0, 0, 0.15, -0.104847, 0.107272, 0, -0.654224, 0.0392685, 0.650191)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_hho4i" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/14"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/14/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Hong Kong"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="15" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.0874249, -0.121889, 0, 0, 0, 0.15, -0.121889, 0.0874249, 0, -0.758066, 0.0392685, 0.526283)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_4r17y" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/15"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/15/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Câble"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="16" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.066564, -0.134422, 0, 0, 0, 0.15, -0.134422, 0.066564, 0, -0.836969, 0.0392685, 0.396054)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_nesm3" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/16"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/16/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Jakarta"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="17" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.0417582, -0.14407, 0, 0, 0, 0.15, -0.14407, 0.0417582, 0, -0.898554, 0.0392685, 0.23359)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_xsif5" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/17"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/17/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.0313726, 0.227451, 0.203922, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Tokyo"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="18" type="Sprite3D" parent="cities"]
+transform = Transform3D(-0.00916772, -0.14972, 0, 0, 0, 0.15, -0.14972, 0.00916773, 0, -0.930286, 0.0392685, 0.0791318)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_fv0ss" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/18"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/18/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.239216, 0.184314, 0.0470588, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Aéroport"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="19" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.013367, -0.149403, -0.000117813, 0.000116484, -0.000107855, 0.15, -0.149403, -0.0133671, 0.000106455, -0.899889, 0.0357175, -0.0782165)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_mhhws" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/19"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/19/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Sao Polo"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="20" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.0373796, -0.145268, 0, 0, 0, 0.15, -0.145268, -0.0373796, 0, -0.874444, 0.0392685, -0.233874)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_7b001" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/20"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/20/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Mexico"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="21" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.0631459, -0.136061, 0, 0, 0, 0.15, -0.136061, -0.0631459, 0, -0.818746, 0.0392685, -0.384574)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_etyqv" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/21"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/21/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Roue"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="22" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.0851033, -0.123521, 0, 0, 0, 0.15, -0.123521, -0.0851034, 0, -0.743758, 0.0392685, -0.522854)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_h5gls" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/22"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/22/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Buenos
+Aires"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="23" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.10698, -0.105144, 0, 0, 0, 0.15, -0.105144, -0.10698, 0, -0.640597, 0.0392685, -0.644214)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_adotj" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/23"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/23/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Montréal"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="24" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.124315, -0.0839398, 0, 0, 0, 0.15, -0.0839398, -0.124315, 0, -0.519328, 0.0392685, -0.745865)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_qmdhp" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/24"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/24/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "VDSL
+"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="25" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.136037, -0.0631982, 0, 0, 0, 0.15, -0.0631982, -0.136037, 0, -0.389905, 0.0392685, -0.82057)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_pr35v" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/25"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/25/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Los
+Angeles"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="26" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.145141, -0.0378712, 0, 0, 0, 0.15, -0.0378712, -0.145141, 0, -0.227337, 0.0392685, -0.882025)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_1usq4" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/26"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/26/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.439216, 0.294118, 0.176471, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "New
+York"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="27" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.149215, -0.0153226, 0, 0, 0, 0.15, -0.0153226, -0.149216, 0, -0.0779918, 0.0392685, -0.918667)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_hhfid" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/27"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/27/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.239216, 0.184314, 0.0470588, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Jeux
+Olympiques"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="28" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.149415, 0.0132377, 0, 0, 0, 0.15, 0.0132377, -0.149415, 0, 0.083639, 0.0392685, -0.919283)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_wk73t" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/28"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/28/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_outline_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Madrid"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="29" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.144916, 0.0387217, 0, 0, 0, 0.15, 0.0387217, -0.144916, 0, 0.241793, 0.0392685, -0.890502)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_6rb5p" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/29"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/29/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Rome"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="30" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.136044, 0.0631839, 0, 0, 0, 0.15, 0.0631839, -0.136044, 0, 0.381558, 0.0392685, -0.836858)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_6741k" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/30"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/30/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Roue"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="31" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.123319, 0.0853963, 0, 0, 0, 0.15, 0.0853963, -0.123319, 0, 0.537006, 0.0392685, -0.746241)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_x2ohm" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/31"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/31/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Berlin"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="32" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.107272, 0.104847, 0, 0, 0, 0.15, 0.104847, -0.107272, 0, 0.654224, 0.0392685, -0.650191)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_304ir" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/32"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/32/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "FTTH"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="33" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.0874249, 0.121889, 0, 0, 0, 0.15, 0.121889, -0.0874249, 0, 0.758065, 0.0392685, -0.526283)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_uh5l5" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/33"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/33/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Londres"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="34" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.066564, 0.134422, 0, 0, 0, 0.15, 0.134422, -0.066564, 0, 0.836969, 0.0392685, -0.396054)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_3h50c" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/34"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/34/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Festival"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="35" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.0417582, 0.14407, 0, 0, 0, 0.15, 0.14407, -0.0417582, 0, 0.898554, 0.0392685, -0.23359)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_a16ss" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/35"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/35/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.337255, 0.0941176, 0.0313726, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Paris"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="36" type="Sprite3D" parent="cities"]
+transform = Transform3D(0.00916774, 0.14972, 0, 0, 0, 0.15, 0.14972, -0.00916774, 0, 0.930286, 0.0392685, -0.0791319)
+cast_shadow = 0
+gi_mode = 1
+double_sided = false
+texture = SubResource( "ViewportTexture_3f66g" )
+script = null
+
+[node name="subViewport" type="SubViewport" parent="cities/36"]
+disable_3d = true
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(256, 96)
+size_2d_override = Vector2i(256, 96)
+render_target_update_mode = 4
+script = null
+
+[node name="label" type="Label" parent="cities/36/subViewport"]
+offset_right = 256.0
+offset_bottom = 96.0
+rect_min_size = Vector2(256, 96)
+theme_override_colors/font_shadow_color = Color(0.239216, 0.184314, 0.0470588, 1)
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource( "2_beikt" )
+theme_override_font_sizes/font_size = 32
+text = "Départ"
+align = 1
+valign = 1
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}

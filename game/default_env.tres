@@ -1,7 +1,28 @@
-[gd_resource type="Environment" load_steps=2 format=3 uid="uid://bi6uaod2seyox"]
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bi6uaod2seyox"]
 
-[sub_resource type="Sky" id="1"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7io"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_1urei"]
+sky_material = SubResource( "ProceduralSkyMaterial_ig7io" )
 
 [resource]
 background_mode = 2
-sky = SubResource( "1" )
+background_color = Color(1, 1, 1, 1)
+sky = SubResource( "Sky_1urei" )
+sky_custom_fov = 1.0
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 1
+auto_exposure_min_luma = 0.64
+auto_exposure_max_luma = 3.48
+ssao_enabled = true
+sdfgi_read_sky_light = true
+sdfgi_cascades = 0
+sdfgi_max_distance = 204.8
+adjustment_brightness = 1.05
+adjustment_contrast = 1.05
+adjustment_saturation = 1.1
