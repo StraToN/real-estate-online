@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="1_mqqix"]
 [ext_resource type="Theme" uid="uid://byxq00om1rba6" path="res://theme/red.tres" id="3_0lw1e"]
 [ext_resource type="Font" uid="uid://dfabqgi4p0okc" path="res://font/title.tres" id="3_5xbph"]
-[ext_resource type="AudioStream" uid="uid://bn5e1136jpw4o" path="res://assets/sound/click-0.wav" id="5_6hq06"]
+[ext_resource type="AudioStream" uid="uid://de4pnjmu2vaxg" path="res://assets/sound/click-0.wav" id="5_6hq06"]
 
 [node name="main" type="MarginContainer"]
 anchor_right = 1.0

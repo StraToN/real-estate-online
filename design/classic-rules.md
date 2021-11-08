@@ -51,9 +51,29 @@ En payant X$, le joueur pourra se rendre sur n'importe quelle case du plateau, s
 
 Seules les cases départ, Jeux olympiques ainsi que les cases qui sont contrôlées par les concurrents ne sont pas atteignables.
 
-##### 4x fournisseur accès Internet
+##### 4x merveilles par partie (mais sélectionnées aléatoirement)
 ###### Liste des cases
-ADSL, Cable, VDSL, FTTH
+- Tour eiffel: Paris
+- Pyramides: Le Caire
+- Stade Olympique: Montréal
+- Empire state building: New-York
+- Hollywood: Los Angeles
+- Zocalo: Mexico
+- Avenida Paulista: Sao Polo
+- La Casa Rosada: Buenos Aires
+- Plaza Mayor: Madrid
+- Colisee: Rome
+- Porte de brandebourg: Berlin
+- Big Ben: Londres
+- Ruelles de la Casbah: Alger
+- Mosquée Hassan: Casablanca
+- Bacary Traoré: Dakar
+- Nyiragongo: Kinshasa
+- Les jardins secrets: Séoul
+- La Cité interdite: Pékin
+- Le fort de Tung Chung: Honk-Kong
+- Monument Nasional: Jakarta
+- Shibuya: Tokyo
 
 ###### Prix
 1. 1.0 x X$

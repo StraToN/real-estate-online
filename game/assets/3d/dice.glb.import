@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://s57hjpwu0sp5"
-path="res://.godot/imported/plateau.glb-d92f21b0b392e414d7a4490ba92ed6c9.scn"
+uid="uid://dgjitbmkev5jp"
+path="res://.godot/imported/dice.glb-c32c5533aaee6edb8aa91bf81169e8bc.scn"
 
 [deps]
 
-source_file="res://assets/3d/plateau.glb"
-dest_files=["res://.godot/imported/plateau.glb-d92f21b0b392e414d7a4490ba92ed6c9.scn"]
+source_file="res://assets/3d/dice.glb"
+dest_files=["res://.godot/imported/dice.glb-c32c5533aaee6edb8aa91bf81169e8bc.scn"]
 
 [params]
 
@@ -26,4 +26,11 @@ animation/import=true
 animation/fps=15
 import_script/path=""
 _subresources={
+"meshes": {
+"dice_Cube": {
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": true,
+"save_to_file/path": "res://assets/3d/dice.tres"
+}
+}
 }

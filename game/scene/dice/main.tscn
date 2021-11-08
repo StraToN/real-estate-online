@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd0itiat2y5xi"]
+
+[ext_resource type="Script" path="res://script/dice/main.gd" id="1_075m1"]
+[ext_resource type="ArrayMesh" uid="uid://n25qlku1dlub" path="res://assets/3d/dice.tres" id="1_xw3sn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqryh"]
+size = Vector3(0.0678738, 0.0649667, 0.0640626)
+
+[node name="0" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource( "1_075m1" )
+
+[node name="rigidBody" type="RigidDynamicBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mass = 0.5
+script = null
+
+[node name="mesh" type="MeshInstance3D" parent="rigidBody"]
+gi_mode = 1
+mesh = ExtResource( "1_xw3sn" )
+skeleton = NodePath("")
+surface_material_override/0 = null
+script = null
+
+[node name="collisionShape3D" type="CollisionShape3D" parent="rigidBody"]
+shape = SubResource( "BoxShape3D_aqryh" )
+script = null
