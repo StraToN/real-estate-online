@@ -23,15 +23,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.19636364"
-     inkscape:cx="-1365.1155"
-     inkscape:cy="127.88351"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="-2521.4516"
+     inkscape:cy="-1265.0294"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
-     inkscape:pagecheckerboard="false"
+     inkscape:pagecheckerboard="true"
      showborder="false"
      inkscape:showpageshadow="false"
      objecttolerance="10000"
@@ -58,7 +58,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1387,5 +1387,22 @@
        y="393.07959"
        rx="1.322906"
        ry="1.322906" />
+    <path
+       id="rect873"
+       style="fill:#ffffff;stroke:none;stroke-width:1.85289"
+       d="m -677.39981,-349.58692 c -2.56663,0 -4.63254,2.06597 -4.63254,4.63217 0.92582,28.0582 2.62756,27.61841 -7.03597,25.0291 -2.44757,-0.77237 -5.03936,0.57425 -5.81181,3.02182 -0.43418,1.60552 2.81593,4.18046 6.6599,7.1735 3.84398,2.99296 7.64172,4.9265 9.6481,5.22574 2.00635,0.29903 15.45992,0.4713 17.57904,0.2269 2.11912,-0.24441 8.64668,-4.29294 8.64668,-13.42981 v -5.37772 c 0,-1.12916 -0.91813,-3.46335 -2.97071,-3.46335 -2.05327,0 -2.62752,0.90829 -2.62752,2.03747 0,-2.03747 -1.92584,-3.86177 -3.90141,-3.89034 -2.56594,0 -3.50993,0.99023 -3.50993,2.222 0,-2.222 -1.29838,-4.04314 -3.31874,-4.07486 -2.56594,0 -4.09328,1.07573 -4.09328,2.41016 -0.56024,-4.63391 -0.61626,-6.52291 0,-17.11075 0.14705,-2.56192 -2.06592,-4.63217 -4.63181,-4.63217 z"
+       sodipodi:nodetypes="sccczzzssscccccss"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/icon/white-mouse-click-128x137.png"
+       inkscape:export-xdpi="76.370003"
+       inkscape:export-ydpi="76.370003" />
+    <circle
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583"
+       id="path1659"
+       cx="-736.07697"
+       cy="-346.99103"
+       r="14.177814"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/blank/white-circle-128x128.png"
+       inkscape:export-xdpi="114.66"
+       inkscape:export-ydpi="114.66" />
   </g>
 </svg>

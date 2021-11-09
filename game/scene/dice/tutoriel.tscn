@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://bghy4xywl0rp7"]
+
+[ext_resource type="Texture2D" uid="uid://d3xoheqw7la25" path="res://assets/theme/icon/white-mouse-click-128x137.png" id="1_ovfl8"]
+[ext_resource type="Texture2D" uid="uid://bdg1mgpbo7de6" path="res://assets/theme/blank/white-circle-128x128.png" id="2_qx154"]
+
+[sub_resource type="Animation" id="Animation_wrngo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 68)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8vows"]
+resource_name = "setup"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.2, 2),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 0.466517, 0.466517),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 0.9, 1.2, 1.5, 2),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 0.466517, 0.466517, 0.466517, 0.466517, 0.466517),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 2),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 0.466517, 0.466517),
+"update": 0,
+"values": [Vector2(128, 137), Vector2(128, 137), Vector2(398, 143), Vector2(398, 143)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 0.466517, 0.466517),
+"update": 0,
+"values": [-0.545609, -0.545609, 0.75037, 0.75037]
+}
+
+[node name="hand" type="Sprite2D"]
+position = Vector2(64, 68)
+texture = ExtResource( "1_ovfl8" )
+offset = Vector2(-16, -48)
+
+[node name="sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-28, -104)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource( "2_qx154" )
+region_rect = Rect2(32, 32, 64, 64)
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "setup"
+anims/RESET = SubResource( "Animation_wrngo" )
+anims/setup = SubResource( "Animation_8vows" )
