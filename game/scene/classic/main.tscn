@@ -1,12 +1,15 @@
-[gd_scene load_steps=54 format=3 uid="uid://b0hr4kvypmqqu"]
+[gd_scene load_steps=58 format=3 uid="uid://b0hr4kvypmqqu"]
 
 [ext_resource type="Script" path="res://script/classic/main.gd" id="1_eckrg"]
 [ext_resource type="Environment" uid="uid://bi6uaod2seyox" path="res://default_env.tres" id="2_7g8dw"]
 [ext_resource type="Font" uid="uid://woqrkj461ijl" path="res://font/normal/font.tres" id="2_beikt"]
 [ext_resource type="ArrayMesh" uid="uid://bp57c14qcu5da" path="res://assets/3d/plateau.tres" id="2_mafsv"]
+[ext_resource type="Script" path="res://script/camera/rotating-camera.gd" id="3_8ahap"]
 [ext_resource type="Shape3D" uid="uid://dkqyx8mva6w8m" path="res://assets/3d/plateau-collision.tres" id="3_jt3wg"]
 [ext_resource type="ArrayMesh" uid="uid://take8bm05mnt" path="res://assets/3d/character-0.tres" id="4_t23ev"]
 [ext_resource type="PackedScene" uid="uid://cd0itiat2y5xi" path="res://scene/dice/main.tscn" id="7_68gfx"]
+[ext_resource type="ArrayMesh" uid="uid://x11m2vrf1x38" path="res://assets/3d/dice-holder.tres" id="8_aruef"]
+[ext_resource type="Material" uid="uid://cyd7uhr4domhu" path="res://assets/material/transparent.tres" id="9_07igs"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1rxxp"]
 friction = 0.5
@@ -395,8 +398,8 @@ tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.663875, 5.47344e-09, 8.43386e-08, 0.747844, 0.2, 1, -0.653822, -0.12965, -0.115093, 0.73652, 0.333333, 1, -0.627396, -0.244484, -0.217033, 0.706752, 0.4, 1, -0.619116, -0.269946, -0.239635, 0.697424, 0.666667, 1, -0.649192, -0.156413, -0.13885, 0.731304, 0.8, 1, -0.663209, -0.0334703, -0.0297121, 0.747095, 0.933333, 1, -0.65781, 0.100853, 0.0895294, 0.741012, 1.06667, 1, -0.635097, 0.217797, 0.193342, 0.715426, 1.26667, 1, -0.612153, 0.289395, 0.256901, 0.68958, 1.4, 1, -0.639141, 0.202228, 0.179521, 0.719982, 1.46667, 1, -0.653801, 0.129784, 0.115212, 0.736496, 1.65, 1, -0.663875, 5.47344e-09, 8.43386e-08, 0.747844)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1cg8a"]
-viewport_path = NodePath("plateau/cities/01/subViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_tddhp"]
+viewport_path = NodePath("cities/01/subViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_0grev"]
 viewport_path = NodePath("cities/02/subViewport")
@@ -503,63 +506,58 @@ viewport_path = NodePath("cities/35/subViewport")
 [sub_resource type="ViewportTexture" id="ViewportTexture_3f66g"]
 viewport_path = NodePath("cities/36/subViewport")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bbh0r"]
+data = PackedVector3Array(-0.1875, -0.1875, -0.1875, 0.1875, -0.1875, 0.1875, 0.1875, -0.1875, -0.1875, -0.1875, -0.1875, -0.1875, -0.1875, -0.1875, 0.1875, 0.1875, -0.1875, 0.1875, 0.1875, -0.1875, 0.1875, -0.1875, 0.1875, 0.1875, 0.1875, 0.1875, 0.1875, 0.1875, -0.1875, 0.1875, -0.1875, -0.1875, 0.1875, -0.1875, 0.1875, 0.1875, 0.1875, -0.1875, -0.1875, 0.1875, 0.1875, 0.1875, 0.1875, 0.1875, -0.1875, 0.1875, -0.1875, -0.1875, 0.1875, -0.1875, 0.1875, 0.1875, 0.1875, 0.1875, -0.1875, -0.1875, -0.1875, 0.1875, 0.1875, -0.1875, -0.1875, 0.1875, -0.1875, -0.1875, -0.1875, -0.1875, 0.1875, -0.1875, -0.1875, 0.1875, 0.1875, -0.1875, -0.1875, -0.1875, 0.1875, -0.1875, 0.1875, -0.1875, -0.1875, 0.1875, 0.1875, -0.1875, -0.1875, 0.1875, -0.1875, -0.1875, -0.1875, -0.1875, 0.1875, -0.1875, -0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, 0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, -0.15, -0.15, -0.15, -0.15, 0.15, -0.15, 0.15, 0.15, -0.15, 0.15, -0.15, -0.15, -0.15, -0.15, 0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, -0.15, -0.15, 0.15, -0.15, -0.15, 0.15, 0.15, 0.1875, 0.1875, 0.1875, -0.1875, 0.1875, -0.1875, 0.1875, 0.1875, -0.1875, 0.1875, 0.1875, 0.1875, -0.1875, 0.1875, 0.1875, -0.1875, 0.1875, -0.1875)
+
 [node name="main" type="Node3D"]
 script = ExtResource( "1_eckrg" )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="real" type="DirectionalLight3D" parent="."]
+[node name="player" type="Node3D" parent="."]
+script = ExtResource( "3_8ahap" )
+
+[node name="real" type="DirectionalLight3D" parent="player"]
 transform = Transform3D(0.971533, 0.164182, 0.170789, 0, -0.720914, 0.693025, 0.236906, -0.673296, -0.700391, 0.417894, 5.38921, -6.29452)
 light_energy = 0.89
 shadow_enabled = true
 shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
-script = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="counter" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.974433, -0.168165, 0.149, 0, 0.663169, 0.74847, -0.224679, -0.729334, 0.646214, 1.05672, 4.86582, 4.92231)
+[node name="counter" type="DirectionalLight3D" parent="player"]
+transform = Transform3D(0.974433, -0.168165, 0.149, 0, 0.663169, 0.74847, -0.224679, -0.729334, 0.646213, 1.05672, 4.86582, 4.92231)
 light_color = Color(0.108, 0.2844, 0.36, 1)
 shadow_color = Color(0.0745098, 0.137255, 0.160784, 1)
 directional_shadow_mode = 0
 directional_shadow_fade_start = 0.0
 directional_shadow_max_distance = 0.0
 directional_shadow_pancake_size = 0.0
-script = null
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="camera" type="Camera3D" parent="."]
-transform = Transform3D(0.544434, -0.830641, 0.116739, 8.88179e-16, 0.139173, 0.990268, -0.838804, -0.539135, 0.0757705, 0.277843, 1.42026, 0.0952806)
+[node name="camera" type="Camera3D" parent="player"]
+transform = Transform3D(0.541943, -0.813542, 0.210825, 0.0234244, 0.265383, 0.963858, -0.840089, -0.517418, 0.162879, 0.413486, 1.42026, 0.313964)
 environment = ExtResource( "2_7g8dw" )
 current = true
-script = null
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="plateau" type="MeshInstance3D" parent="."]
 mesh = ExtResource( "2_mafsv" )
-surface_material_override/0 = null
-script = null
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="staticBody3D" type="StaticBody3D" parent="plateau"]
 physics_material_override = SubResource( "PhysicsMaterial_1rxxp" )
-script = null
 
 [node name="collisionShape3D" type="CollisionShape3D" parent="plateau/staticBody3D"]
 shape = ExtResource( "3_jt3wg" )
-script = null
 
 [node name="players" type="Path3D" parent="."]
 curve = SubResource( "Curve3D_5qthu" )
-script = null
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -568,15 +566,12 @@ __meta__ = {
 [node name="0" type="PathFollow3D" parent="players"]
 transform = Transform3D(0.998422, 0, -0.0561532, 0, 1, 0, 0.0561621, 0, 0.998263, 0.689821, 0, -0.0635131)
 rotation_mode = 4
-script = null
 
 [node name="origin" type="Node3D" parent="players/0"]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.040759, -0.00216075, -0.0309888)
-script = null
 
 [node name="Armature" type="Node3D" parent="players/0/origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01886, 0)
-script = null
 
 [node name="Skeleton3D" type="Skeleton3D" parent="players/0/origin/Armature"]
 bones/0/name = "Bone"
@@ -663,33 +658,25 @@ bones/11/enabled = true
 bones/11/position = Vector3(-4.47366e-15, 0.218108, -6.85435e-09)
 bones/11/rotation = Quaternion(-0.663875, 5.47344e-09, 8.43385e-08, 0.747844)
 bones/11/scale = Vector3(1, 1, 1)
-script = null
 
 [node name="Cube" type="MeshInstance3D" parent="players/0/origin/Armature/Skeleton3D"]
 gi_mode = 1
 mesh = ExtResource( "4_t23ev" )
-surface_material_override/0 = null
-surface_material_override/1 = null
-script = null
 
 [node name="animationPlayer" type="AnimationPlayer" parent="players/0/origin"]
 autoplay = "Idle"
 anims/Idle = SubResource( "Animation_iae26" )
 anims/Walk = SubResource( "Animation_jf18u" )
-script = null
 
 [node name="1" type="PathFollow3D" parent="players"]
 transform = Transform3D(0.998422, 0, -0.0561546, 0, 1, 0, 0.0561621, 0, 0.998287, 0.689821, 0, -0.0635131)
 rotation_mode = 4
-script = null
 
 [node name="origin" type="Node3D" parent="players/1"]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.158287, -0.00216075, -0.0452385)
-script = null
 
 [node name="Armature" type="Node3D" parent="players/1/origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01886, 0)
-script = null
 
 [node name="Skeleton3D" type="Skeleton3D" parent="players/1/origin/Armature"]
 bones/0/name = "Bone"
@@ -776,33 +763,25 @@ bones/11/enabled = true
 bones/11/position = Vector3(-4.47366e-15, 0.218108, -6.85435e-09)
 bones/11/rotation = Quaternion(-0.663875, 5.47344e-09, 8.43385e-08, 0.747844)
 bones/11/scale = Vector3(1, 1, 1)
-script = null
 
 [node name="Cube" type="MeshInstance3D" parent="players/1/origin/Armature/Skeleton3D"]
 gi_mode = 1
 mesh = ExtResource( "4_t23ev" )
-surface_material_override/0 = null
-surface_material_override/1 = null
-script = null
 
 [node name="animationPlayer" type="AnimationPlayer" parent="players/1/origin"]
 autoplay = "Idle"
 anims/Idle = SubResource( "Animation_ems2y" )
 anims/Walk = SubResource( "Animation_iy817" )
-script = null
 
 [node name="2" type="PathFollow3D" parent="players"]
 transform = Transform3D(0.998422, 0, -0.0561546, 0, 1, 0, 0.0561621, 0, 0.998287, 0.689821, 0, -0.0635131)
 rotation_mode = 4
-script = null
 
 [node name="origin" type="Node3D" parent="players/2"]
 transform = Transform3D(0.025, 0, 6.98492e-10, 0, 0.025, 0, -3.49246e-10, 0, 0.025, 0.059402, -0.00216075, 0.0241516)
-script = null
 
 [node name="Armature" type="Node3D" parent="players/2/origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01886, 0)
-script = null
 
 [node name="Skeleton3D" type="Skeleton3D" parent="players/2/origin/Armature"]
 bones/0/name = "Bone"
@@ -889,33 +868,25 @@ bones/11/enabled = true
 bones/11/position = Vector3(-4.47366e-15, 0.218108, -6.85435e-09)
 bones/11/rotation = Quaternion(-0.663875, 5.47344e-09, 8.43385e-08, 0.747844)
 bones/11/scale = Vector3(1, 1, 1)
-script = null
 
 [node name="Cube" type="MeshInstance3D" parent="players/2/origin/Armature/Skeleton3D"]
 gi_mode = 1
 mesh = ExtResource( "4_t23ev" )
-surface_material_override/0 = null
-surface_material_override/1 = null
-script = null
 
 [node name="animationPlayer" type="AnimationPlayer" parent="players/2/origin"]
 autoplay = "Idle"
 anims/Idle = SubResource( "Animation_78vct" )
 anims/Walk = SubResource( "Animation_6d66k" )
-script = null
 
 [node name="3" type="PathFollow3D" parent="players"]
 transform = Transform3D(0.998422, 0, -0.0561546, 0, 1, 0, 0.0561621, 0, 0.998287, 0.689821, 0, -0.0635131)
 rotation_mode = 4
-script = null
 
 [node name="origin" type="Node3D" parent="players/3"]
 transform = Transform3D(0.025, 0, 4.65661e-10, 0, 0.025, 0, -1.16415e-10, 0, 0.025, 0.172164, -0.00216075, 0.0154406)
-script = null
 
 [node name="Armature" type="Node3D" parent="players/3/origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01886, 0)
-script = null
 
 [node name="Skeleton3D" type="Skeleton3D" parent="players/3/origin/Armature"]
 bones/0/name = "Bone"
@@ -1002,32 +973,25 @@ bones/11/enabled = true
 bones/11/position = Vector3(-4.47366e-15, 0.218108, -6.85435e-09)
 bones/11/rotation = Quaternion(-0.663875, 5.47344e-09, 8.43385e-08, 0.747844)
 bones/11/scale = Vector3(1, 1, 1)
-script = null
 
 [node name="Cube" type="MeshInstance3D" parent="players/3/origin/Armature/Skeleton3D"]
 gi_mode = 1
 mesh = ExtResource( "4_t23ev" )
-surface_material_override/0 = null
-surface_material_override/1 = null
-script = null
 
 [node name="animationPlayer" type="AnimationPlayer" parent="players/3/origin"]
 autoplay = "Idle"
 anims/Idle = SubResource( "Animation_jl82o" )
 anims/Walk = SubResource( "Animation_3ayvn" )
-script = null
 
 [node name="cities" type="Node3D" parent="."]
 top_level = true
-script = null
 
 [node name="01" type="Sprite3D" parent="cities"]
-transform = Transform3D(-0.013367, 0.149403, 0.000117813, 0.000116484, -0.000107855, 0.15, 0.149403, 0.0133671, -0.000106455, 0.899889, 0.0357175, 0.0782166)
+transform = Transform3D(-0.013367, 0.149403, 0.000117813, 0.000116484, -0.000107855, 0.15, 0.149403, 0.0133671, -0.000106455, 0.910957, 0.0329833, 0.0782166)
 cast_shadow = 0
 gi_mode = 1
 double_sided = false
-texture = SubResource( "ViewportTexture_1cg8a" )
-script = null
+texture = SubResource( "ViewportTexture_tddhp" )
 
 [node name="subViewport" type="SubViewport" parent="cities/01"]
 disable_3d = true
@@ -1036,7 +1000,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/01/subViewport"]
 offset_right = 256.0
@@ -1049,7 +1012,6 @@ theme_override_font_sizes/font_size = 32
 text = "Alger"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1060,7 +1022,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_0grev" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/02"]
 disable_3d = true
@@ -1069,7 +1030,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/02/subViewport"]
 offset_right = 256.0
@@ -1082,7 +1042,6 @@ theme_override_font_sizes/font_size = 32
 text = "Impôts"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1093,7 +1052,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_q4bgn" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/03"]
 disable_3d = true
@@ -1102,7 +1060,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/03/subViewport"]
 offset_right = 256.0
@@ -1115,7 +1072,6 @@ theme_override_font_sizes/font_size = 32
 text = "Casablanca"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1126,7 +1082,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_nqgf0" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/04"]
 disable_3d = true
@@ -1135,7 +1090,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/04/subViewport"]
 offset_right = 256.0
@@ -1148,7 +1102,6 @@ theme_override_font_sizes/font_size = 32
 text = "ADSL"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1159,7 +1112,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_pebws" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/05"]
 disable_3d = true
@@ -1168,7 +1120,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/05/subViewport"]
 offset_right = 256.0
@@ -1181,7 +1132,6 @@ theme_override_font_sizes/font_size = 32
 text = "Dakar"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1192,7 +1142,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_88yns" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/06"]
 disable_3d = true
@@ -1201,7 +1150,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/06/subViewport"]
 offset_right = 256.0
@@ -1214,7 +1162,6 @@ theme_override_font_sizes/font_size = 32
 text = "Roue"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1225,7 +1172,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_jup6w" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/07"]
 disable_3d = true
@@ -1234,7 +1180,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/07/subViewport"]
 offset_right = 256.0
@@ -1247,7 +1192,6 @@ theme_override_font_sizes/font_size = 32
 text = "Kinshasa"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1258,7 +1202,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_dbptj" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/08"]
 disable_3d = true
@@ -1267,7 +1210,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/08/subViewport"]
 offset_right = 256.0
@@ -1280,7 +1222,6 @@ theme_override_font_sizes/font_size = 32
 text = "Le Caire"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1291,7 +1232,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_yuoy5" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/09"]
 disable_3d = true
@@ -1300,7 +1240,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/09/subViewport"]
 offset_right = 256.0
@@ -1313,7 +1252,6 @@ theme_override_font_sizes/font_size = 32
 text = "Prison"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1324,7 +1262,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_v58yt" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/10"]
 disable_3d = true
@@ -1333,7 +1270,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/10/subViewport"]
 offset_right = 256.0
@@ -1346,7 +1282,6 @@ theme_override_font_sizes/font_size = 32
 text = "Bombay"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1357,7 +1292,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_nb5tk" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/11"]
 disable_3d = true
@@ -1366,7 +1300,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/11/subViewport"]
 offset_right = 256.0
@@ -1379,7 +1312,6 @@ theme_override_font_sizes/font_size = 32
 text = "Roue"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1390,7 +1322,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_eb6sr" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/12"]
 disable_3d = true
@@ -1399,7 +1330,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/12/subViewport"]
 offset_right = 256.0
@@ -1412,7 +1342,6 @@ theme_override_font_sizes/font_size = 32
 text = "Séoul"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1423,7 +1352,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_i7j64" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/13"]
 disable_3d = true
@@ -1432,7 +1360,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/13/subViewport"]
 offset_right = 256.0
@@ -1445,7 +1372,6 @@ theme_override_font_sizes/font_size = 32
 text = "Pékin"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1456,7 +1382,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_hho4i" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/14"]
 disable_3d = true
@@ -1465,7 +1390,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/14/subViewport"]
 offset_right = 256.0
@@ -1478,7 +1402,6 @@ theme_override_font_sizes/font_size = 32
 text = "Hong Kong"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1489,7 +1412,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_4r17y" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/15"]
 disable_3d = true
@@ -1498,7 +1420,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/15/subViewport"]
 offset_right = 256.0
@@ -1511,7 +1432,6 @@ theme_override_font_sizes/font_size = 32
 text = "Câble"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1522,7 +1442,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_nesm3" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/16"]
 disable_3d = true
@@ -1531,7 +1450,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/16/subViewport"]
 offset_right = 256.0
@@ -1544,7 +1462,6 @@ theme_override_font_sizes/font_size = 32
 text = "Jakarta"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1555,7 +1472,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_xsif5" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/17"]
 disable_3d = true
@@ -1564,7 +1480,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/17/subViewport"]
 offset_right = 256.0
@@ -1577,7 +1492,6 @@ theme_override_font_sizes/font_size = 32
 text = "Tokyo"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1588,7 +1502,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_fv0ss" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/18"]
 disable_3d = true
@@ -1597,7 +1510,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/18/subViewport"]
 offset_right = 256.0
@@ -1610,7 +1522,6 @@ theme_override_font_sizes/font_size = 32
 text = "Aéroport"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1621,7 +1532,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_mhhws" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/19"]
 disable_3d = true
@@ -1630,7 +1540,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/19/subViewport"]
 offset_right = 256.0
@@ -1643,7 +1552,6 @@ theme_override_font_sizes/font_size = 32
 text = "Sao Polo"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1654,7 +1562,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_7b001" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/20"]
 disable_3d = true
@@ -1663,7 +1570,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/20/subViewport"]
 offset_right = 256.0
@@ -1676,7 +1582,6 @@ theme_override_font_sizes/font_size = 32
 text = "Mexico"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1687,7 +1592,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_etyqv" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/21"]
 disable_3d = true
@@ -1696,7 +1600,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/21/subViewport"]
 offset_right = 256.0
@@ -1709,7 +1612,6 @@ theme_override_font_sizes/font_size = 32
 text = "Roue"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1720,7 +1622,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_h5gls" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/22"]
 disable_3d = true
@@ -1729,7 +1630,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/22/subViewport"]
 offset_right = 256.0
@@ -1743,7 +1643,6 @@ text = "Buenos
 Aires"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1754,7 +1653,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_adotj" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/23"]
 disable_3d = true
@@ -1763,7 +1661,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/23/subViewport"]
 offset_right = 256.0
@@ -1776,7 +1673,6 @@ theme_override_font_sizes/font_size = 32
 text = "Montréal"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1787,7 +1683,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_qmdhp" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/24"]
 disable_3d = true
@@ -1796,7 +1691,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/24/subViewport"]
 offset_right = 256.0
@@ -1810,7 +1704,6 @@ text = "VDSL
 "
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1821,7 +1714,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_pr35v" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/25"]
 disable_3d = true
@@ -1830,7 +1722,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/25/subViewport"]
 offset_right = 256.0
@@ -1844,7 +1735,6 @@ text = "Los
 Angeles"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1855,7 +1745,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_1usq4" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/26"]
 disable_3d = true
@@ -1864,7 +1753,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/26/subViewport"]
 offset_right = 256.0
@@ -1878,7 +1766,6 @@ text = "New
 York"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1889,7 +1776,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_hhfid" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/27"]
 disable_3d = true
@@ -1898,7 +1784,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/27/subViewport"]
 offset_right = 256.0
@@ -1912,7 +1797,6 @@ text = "Jeux
 Olympiques"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1923,7 +1807,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_wk73t" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/28"]
 disable_3d = true
@@ -1932,7 +1815,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/28/subViewport"]
 offset_right = 256.0
@@ -1945,7 +1827,6 @@ theme_override_font_sizes/font_size = 32
 text = "Madrid"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1956,7 +1837,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_6rb5p" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/29"]
 disable_3d = true
@@ -1965,7 +1845,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/29/subViewport"]
 offset_right = 256.0
@@ -1978,7 +1857,6 @@ theme_override_font_sizes/font_size = 32
 text = "Rome"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1989,7 +1867,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_6741k" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/30"]
 disable_3d = true
@@ -1998,7 +1875,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/30/subViewport"]
 offset_right = 256.0
@@ -2011,7 +1887,6 @@ theme_override_font_sizes/font_size = 32
 text = "Roue"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2022,7 +1897,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_x2ohm" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/31"]
 disable_3d = true
@@ -2031,7 +1905,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/31/subViewport"]
 offset_right = 256.0
@@ -2044,7 +1917,6 @@ theme_override_font_sizes/font_size = 32
 text = "Berlin"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2055,7 +1927,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_304ir" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/32"]
 disable_3d = true
@@ -2064,7 +1935,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/32/subViewport"]
 offset_right = 256.0
@@ -2077,7 +1947,6 @@ theme_override_font_sizes/font_size = 32
 text = "FTTH"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2088,7 +1957,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_uh5l5" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/33"]
 disable_3d = true
@@ -2097,7 +1965,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/33/subViewport"]
 offset_right = 256.0
@@ -2110,7 +1977,6 @@ theme_override_font_sizes/font_size = 32
 text = "Londres"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2121,7 +1987,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_3h50c" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/34"]
 disable_3d = true
@@ -2130,7 +1995,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/34/subViewport"]
 offset_right = 256.0
@@ -2143,7 +2007,6 @@ theme_override_font_sizes/font_size = 32
 text = "Festival"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2154,7 +2017,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_a16ss" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/35"]
 disable_3d = true
@@ -2163,7 +2025,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/35/subViewport"]
 offset_right = 256.0
@@ -2176,7 +2037,6 @@ theme_override_font_sizes/font_size = 32
 text = "Paris"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2187,7 +2047,6 @@ cast_shadow = 0
 gi_mode = 1
 double_sided = false
 texture = SubResource( "ViewportTexture_3f66g" )
-script = null
 
 [node name="subViewport" type="SubViewport" parent="cities/36"]
 disable_3d = true
@@ -2196,7 +2055,6 @@ gui_disable_input = true
 size = Vector2i(256, 96)
 size_2d_override = Vector2i(256, 96)
 render_target_update_mode = 4
-script = null
 
 [node name="label" type="Label" parent="cities/36/subViewport"]
 offset_right = 256.0
@@ -2209,22 +2067,34 @@ theme_override_font_sizes/font_size = 32
 text = "Départ"
 align = 1
 valign = 1
-script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="dices" type="Node3D" parent="."]
-script = null
+visible = false
 
 [node name="camera" type="Camera3D" parent="dices"]
 transform = Transform3D(0.965926, -0.258819, 0, 0.0387428, 0.14459, 0.988733, -0.255903, -0.955043, 0.149691, 0.00817859, 1.24865, 0.220152)
 environment = ExtResource( "2_7g8dw" )
 fov = 38.7399
-script = null
+
+[node name="dice-holder" type="Node3D" parent="dices"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.684612, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="dices/dice-holder"]
+gi_mode = 1
+mesh = ExtResource( "8_aruef" )
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource( "9_07igs" )
+
+[node name="staticBody3D" type="StaticBody3D" parent="dices/dice-holder/Cube"]
+
+[node name="collisionShape3D" type="CollisionShape3D" parent="dices/dice-holder/Cube/staticBody3D"]
+shape = SubResource( "ConcavePolygonShape3D_bbh0r" )
 
 [node name="0" parent="dices" instance=ExtResource( "7_68gfx" )]
-transform = Transform3D(0.865953, 0.495741, -0.0660747, -0.445826, 0.705299, -0.551174, -0.226637, 0.506749, 0.83177, 0, 0.516996, 0.118053)
+transform = Transform3D(0.865953, 0.495741, -0.0660747, -0.445826, 0.705299, -0.551174, -0.226637, 0.506749, 0.83177, -0.103519, 0.690968, 0.033647)
 
 [node name="1" parent="dices" instance=ExtResource( "7_68gfx" )]
 transform = Transform3D(0.865953, 0.495741, -0.0660747, -0.0194024, -0.0987172, -0.994926, -0.499749, 0.862842, -0.0758659, 0.033024, 0.681676, 0.0662649)

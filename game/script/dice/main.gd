@@ -1,5 +1,6 @@
 extends Node3D
 
+const PERPANDICULAR_ANGLE = 90
 const NOT_IMPORTANT_ANGLE = -9999
 const EPSILON = 0.01
 const DICE_VALUE = [
@@ -10,20 +11,22 @@ const DICE_VALUE = [
   Vector3(0, NOT_IMPORTANT_ANGLE, 0), # 5
   Vector3(-90, NOT_IMPORTANT_ANGLE, NOT_IMPORTANT_ANGLE), # 6
 ]
+const SLEEPING_VECTOR3 = Vector3(EPSILON, EPSILON, EPSILON)
 
 func _ready():
-  set_process(true)
+  $rigidBody.set_freeze_enabled(false)
 
-func _process(delta):
-  print(get_value())
+func is_entity_moving():
+  return abs($rigidBody.angular_velocity) > SLEEPING_VECTOR3 or \
+         abs($rigidBody.linear_velocity) > SLEEPING_VECTOR3
 
 func get_value():
   var value = 1
   var l_global_rotation = $rigidBody.global_transform.basis.get_euler()
 
-  l_global_rotation.x = int(round(rad2deg(l_global_rotation.x) / 90.0)) * 90
-  l_global_rotation.y = int(round(rad2deg(l_global_rotation.y) / 90.0)) * 90
-  l_global_rotation.z = int(round(rad2deg(l_global_rotation.z) / 90.0)) * 90
+  l_global_rotation.x = int(round(rad2deg(l_global_rotation.x) / PERPANDICULAR_ANGLE)) * PERPANDICULAR_ANGLE
+  l_global_rotation.y = int(round(rad2deg(l_global_rotation.y) / PERPANDICULAR_ANGLE)) * PERPANDICULAR_ANGLE
+  l_global_rotation.z = int(round(rad2deg(l_global_rotation.z) / PERPANDICULAR_ANGLE)) * PERPANDICULAR_ANGLE
 
   for computed_angle in DICE_VALUE:
     if (computed_angle.x == NOT_IMPORTANT_ANGLE or \

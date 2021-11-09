@@ -5,20 +5,8 @@
 ### Matériel requis
 
 #### Plateau
-Le tout se déroule sur un plateau de jeu possédant 4 côtés, dont 10 cases par côté.
-Exemple de plateau, chaque `#` représente une case.
-```
-# # # # # # # # # #
-#                 #
-#                 #
-#                 #
-#                 #
-#                 #
-#                 #
-#                 #
-#                 #
-# # # # # # # # # #
-```
+Le tout se déroule sur un plateau de jeu possédant 4 côtés, dont 9 cases par côté.
+![Game board](./board-game.png)
 
 #### Dés
 Deux dés a 6 faces sont présents, chaque joueur joue a tour de rôle, le premier est déterminé aléatoirement par l'ordinateur.
@@ -130,6 +118,8 @@ Lorsqu'un festival a lieu dans une de vos villes, les loyers sont doublés.
 
 ## Déroulement de la partie
 On choisit le mode de paiement des impôts. Chaque joueur peut choisir s'il paie proportionnellement a ses biens, ou alors s'il paie un montant fixe qui double tous les 3 tours.
+
+![State machine](./global-state-machine.png)
 
 ## Fin de partie
 - La fin de partie intervient quand tous les joueurs sauf un ont fait faillite.

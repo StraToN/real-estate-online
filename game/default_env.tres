@@ -16,7 +16,6 @@ sky = SubResource( "Sky_1urei" )
 sky_custom_fov = 1.0
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-reflected_light_source = 1
 auto_exposure_min_luma = 0.64
 auto_exposure_max_luma = 3.48
 ssao_enabled = true

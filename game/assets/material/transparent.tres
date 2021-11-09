@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cyd7uhr4domhu"]
+
+[resource]
+transparency = 1
+blend_mode = 3
+shading_mode = 0

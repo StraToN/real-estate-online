@@ -13,5 +13,7 @@ Added auto-grant to publisher Xavier Sellier
 Created store item '413895'
 Created store package for store item '413895'
 
-# real-estate-online
+# Real Estate Online
 Real Estate online: A multiplayer board game
+
+[More details](./design/classic-rules.md)
