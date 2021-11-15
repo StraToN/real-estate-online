@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dgjitbmkev5jp"
+uid="uid://bbuskrximfu0a"
 path="res://.godot/imported/dice.glb-c32c5533aaee6edb8aa91bf81169e8bc.scn"
 
 [deps]
@@ -31,6 +31,12 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": true,
 "save_to_file/path": "res://assets/3d/dice.tres"
+}
+},
+"nodes": {
+"PATH:Cube": {
+"generate/physics": true,
+"physics/body_type": 1
 }
 }
 }

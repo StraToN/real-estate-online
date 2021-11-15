@@ -29,6 +29,7 @@ const BOUNDING_BOX = 0.20
 const THROW_FORCE = 1.0
 
 @onready var dice_nodes = [get_node('0'), get_node('1')]
+@onready var rotating_node = get_tree().get_nodes_in_group('rotating_node')[0]
 
 var rng = RandomNumberGenerator.new()
 
@@ -45,10 +46,14 @@ signal throw_value(dice_1, dice_2)
 
 func _ready():
   __board_camera = get_viewport().get_camera_3d()
+  rotating_node.lock_rotation()
 
   roll_dices()
   set_process(false)
   set_process_unhandled_input(true)
+
+func _exit_tree():
+  rotating_node.unlock_rotation()
 
 func _process(delta):
   __delta_acc += delta
@@ -104,13 +109,16 @@ func _dice_threw():
   tween.tween_property(__board_camera, 'far', DEFAULT_CAMERA_DATA.far, ANIMATION_DURATION).set_trans(Tween.TRANS_SINE)
   tween.tween_property(__board_camera, 'position', DEFAULT_CAMERA_DATA.position, ANIMATION_DURATION).set_trans(Tween.TRANS_SINE)
   tween.tween_property(__board_camera, 'rotation', DEFAULT_CAMERA_DATA.rotation, ANIMATION_DURATION).set_trans(Tween.TRANS_SINE)
-
   tween.play()
+
+  # Note:
+  # Ensure we are on the right camera before emitting any signal
+  # Free the current dice since they are already been threw
+  connect('tree_exited', emit_signal, ['throw_value', get_node('0').get_value(), get_node('1').get_value()], CONNECT_ONESHOT)
+  tween.tween_callback(queue_free).set_delay(DICE_THROW_DURATION)
 
   for node in dice_nodes:
     node.stop_dice()
-
-  emit_signal('throw_value', get_node('0').get_value(), get_node('1').get_value())
 
 func _physics_process(delta):
   if __catch_event:

@@ -6,7 +6,6 @@
 [sub_resource type="Animation" id="Animation_fi2lm"]
 resource_name = "Idle"
 length = 1.65
-loop = true
 tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -53,7 +52,6 @@ tracks/5/keys = PackedFloat32Array(0, 1, -0.663875, 5.47344e-09, 8.43385e-08, 0.
 [sub_resource type="Animation" id="Animation_7fr4a"]
 resource_name = "Walk"
 length = 1.65
-loop = true
 tracks/0/type = "rotation_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -103,7 +101,7 @@ rotation_mode = 4
 script = ExtResource( "1_g7ncp" )
 
 [node name="origin" type="Node3D" parent="."]
-transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.040759, -0.00216075, -0.0309888)
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.041, -0.002, -0.031)
 
 [node name="Armature" type="Node3D" parent="origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01886, 0)
@@ -206,8 +204,8 @@ anims/Walk = SubResource( "Animation_7fr4a" )
 [node name="canvas" type="CanvasLayer" parent="."]
 
 [node name="panel" type="PanelContainer" parent="canvas"]
-offset_right = 14.0
-offset_bottom = 14.0
+offset_right = 256.0
+offset_bottom = 96.0
 rect_min_size = Vector2(256, 96)
 __meta__ = {
 "_edit_use_anchors_": false

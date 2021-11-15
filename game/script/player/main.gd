@@ -1,9 +1,11 @@
 @tool
-extends Node3D
+extends PathFollow3D
 
 const constant_utils = preload('res://script/util/constants.gd')
 const DICE_SCENE = preload('res://scene/dice/main.tscn')
 
+const NUMBER_OF_CASES = 36
+const ANIMATION_DURATION = 0.667
 const PLAYER_POSITIONS = [
   Vector3(0.041, -0.002, -0.031),
   Vector3(0.158, -0.002, -0.045),
@@ -23,7 +25,6 @@ signal player_bankrupt(player_index)
 signal player_won(player_index)
 
 var __name = 0
-var __currency = 1
 var __player_type = constant_utils.PLAYER_TYPE.HUMAN_LOCAL
 
 func _ready():
@@ -60,4 +61,29 @@ func begin_turn():
   root_node.call_deferred('add_child', dice_scene_instance)
 
 func _dice_threw(dice_1, dice_2):
-  logger.debug('dice_1: %s, dice_2: %s' % [dice_1, dice_2])
+  var number_of_cases = dice_1 + dice_2
+  var tween = create_tween()
+
+  tween.set_parallel(true)
+  tween.tween_property(self, 'unit_offset', unit_offset + (number_of_cases * 1.0) / NUMBER_OF_CASES, ANIMATION_DURATION).set_trans(Tween.TRANS_SINE)
+
+  if dice_1 == dice_2:
+    tween.tween_callback(begin_turn).set_delay(ANIMATION_DURATION)
+
+  else:
+    tween.tween_callback(_play_case).set_delay(ANIMATION_DURATION)
+
+  tween.play()
+
+func _play_case():
+  var case_number = int(unit_offset * NUMBER_OF_CASES)
+
+  # TODO
+  # Not yet implemented
+  logger.debug('case_number: %s', [case_number])
+  _end_of_turn()
+
+func _end_of_turn():
+  # TODO
+  # Not yet implemented
+  emit_signal('player_end_of_turn', get_index())

@@ -11,13 +11,21 @@ const DICE_VALUE = [
   Vector3(0, NOT_IMPORTANT_ANGLE, 0), # 5
   Vector3(-90, NOT_IMPORTANT_ANGLE, NOT_IMPORTANT_ANGLE), # 6
 ]
-const SLEEPING_VECTOR3 = Vector3(EPSILON, EPSILON, EPSILON)
+const SLEEPING_VECTOR3 = Vector3(EPSILON, EPSILON, EPSILON) * 10.0
 
 func _ready():
+  $rigidBody.connect('body_entered', _play_sound, [])
+  $rigidBody.connect('body_shape_entered', _play_sound, [])
   $rigidBody.set_freeze_enabled(false)
+
   rotate_x(deg2rad(randi() % 180))
   rotate_y(deg2rad(randi() % 180))
   rotate_z(deg2rad(randi() % 180))
+
+func _play_sound(arg0 = null):
+  $soundFX.unit_db = lerp(-10.0, -8.0, $rigidBody.linear_velocity.normalized().x)
+  $soundFX.pitch_scale = lerp(0.95, 1.05, $rigidBody.angular_velocity.normalized().x)
+  $soundFX.play()
 
 func is_entity_moving():
   return abs($rigidBody.angular_velocity) > SLEEPING_VECTOR3 or \
