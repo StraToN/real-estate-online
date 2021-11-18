@@ -31,3 +31,6 @@ const DARK_GREEN_COLOR = Color('#28673b')
 const GREEN_COLOR = Color('#50ce76')
 const LIGHT_GREEN_COLOR = Color('#a4e5b8')
 const ULTRA_LIGHT_GREEN_COLOR = Color('#cff1d9')
+
+const BLACK_COLOR = Color('#171717')
+const WHITE_COLOR = Color('#f9f9f9')

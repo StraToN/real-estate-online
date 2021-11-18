@@ -20,11 +20,6 @@ const DICE_CAMERA_DATA = {
   rotation = Vector3(deg2rad(-81.4), deg2rad(0), deg2rad(15))
 }
 
-const DICE_DEFAULT_POSITIONS = [
-  Vector3(-0.0715676993131638, 0.3684560060501099, 0.0336470007896423),
-  Vector3(0.0330239981412888, 0.3210909962654114, 0.0662648975849152)
-]
-
 const BOUNDING_BOX = 0.20
 const THROW_FORCE = 1.0
 
@@ -77,28 +72,14 @@ func _process(delta):
       _dice_threw()
 
 func _reset_moving_dices():
-  var index = 0
-
   for node in dice_nodes:
     if node.is_entity_moving():
-      node.rotate_x(deg2rad(randi() % 180))
-      node.rotate_y(deg2rad(randi() % 180))
-      node.rotate_z(deg2rad(randi() % 180))
-      node.position = DICE_DEFAULT_POSITIONS[index]
-
-      index += 1
+      node.reset_dice()
 
 func _reset_broken_dices():
-  var index = 0
-
   for node in dice_nodes:
     if node.is_dice_broken():
-      node.rotate_x(deg2rad(randi() % 180))
-      node.rotate_y(deg2rad(randi() % 180))
-      node.rotate_z(deg2rad(randi() % 180))
-      node.position = DICE_DEFAULT_POSITIONS[index]
-
-      index += 1
+      node.reset_dice()
 
 func _dice_threw():
   var tween = create_tween()
@@ -147,19 +128,19 @@ func __free_tutoriel():
 func _unhandled_input(event):
   if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
     if __catch_event and not event.pressed:
-      get_node('0/rigidBody').angular_velocity.x = rng.randf_range(-PI, PI) * 2.0
-      get_node('0/rigidBody').angular_velocity.y = rng.randf_range(-PI, PI) * 2.0
-      get_node('0/rigidBody').angular_velocity.z = rng.randf_range(-PI, PI) * 2.0
+      get_node('0').angular_velocity.x = rng.randf_range(-PI, PI) * 2.0
+      get_node('0').angular_velocity.y = rng.randf_range(-PI, PI) * 2.0
+      get_node('0').angular_velocity.z = rng.randf_range(-PI, PI) * 2.0
 
-      get_node('1/rigidBody').angular_velocity.x = rng.randf_range(-PI, PI) * 2.0
-      get_node('1/rigidBody').angular_velocity.y = rng.randf_range(-PI, PI) * 2.0
-      get_node('1/rigidBody').angular_velocity.z = rng.randf_range(-PI, PI) * 2.0
+      get_node('1').angular_velocity.x = rng.randf_range(-PI, PI) * 2.0
+      get_node('1').angular_velocity.y = rng.randf_range(-PI, PI) * 2.0
+      get_node('1').angular_velocity.z = rng.randf_range(-PI, PI) * 2.0
 
-      get_node('0/rigidBody').linear_velocity.x = rng.randf_range(-THROW_FORCE, THROW_FORCE)
-      get_node('0/rigidBody').linear_velocity.z = rng.randf_range(-THROW_FORCE, THROW_FORCE)
+      get_node('0').linear_velocity.x = rng.randf_range(-THROW_FORCE, THROW_FORCE)
+      get_node('0').linear_velocity.z = rng.randf_range(-THROW_FORCE, THROW_FORCE)
 
-      get_node('1/rigidBody').linear_velocity.x = rng.randf_range(-THROW_FORCE, THROW_FORCE)
-      get_node('1/rigidBody').linear_velocity.z = rng.randf_range(-THROW_FORCE, THROW_FORCE)
+      get_node('1').linear_velocity.x = rng.randf_range(-THROW_FORCE, THROW_FORCE)
+      get_node('1').linear_velocity.z = rng.randf_range(-THROW_FORCE, THROW_FORCE)
 
       __free_dice_holder()
 

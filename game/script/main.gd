@@ -5,8 +5,8 @@ func _ready():
 
   logger.debug('Welcome to Real Estate Online, the multiplayer board game')
 
-  $container/top/original.connect('pressed', _original_game_pressed, [], CONNECT_ONESHOT)
-  $container/top/classic.connect('pressed', _classic_game_pressed, [], CONNECT_ONESHOT)
+  $container/top/create.connect('pressed', _create_game_pressed, [], CONNECT_ONESHOT)
+  $container/top/join.connect('pressed', _join_game_pressed, [], CONNECT_ONESHOT)
   $container/bottom/option.connect('pressed', _option_pressed, [])
   $container/bottom/quit.connect('pressed', _quit_pressed, [], CONNECT_ONESHOT)
   $container/bottom/language.connect('pressed', _language_pressed, [], CONNECT_ONESHOT)
@@ -19,11 +19,11 @@ func _handle_error(error_object):
     error_object.error
   ])
 
-func _classic_game_pressed():
+func _create_game_pressed():
   soundfx_manager.play_sound(soundfx_manager.FX.UI_CLICK)
   pass
 
-func _original_game_pressed():
+func _join_game_pressed():
   soundfx_manager.play_sound(soundfx_manager.FX.UI_CLICK)
   pass
 

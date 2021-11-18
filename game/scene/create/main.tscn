@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://clj7juuk0l0qn"]
+
+[ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="1_7t1us"]
+[ext_resource type="Font" uid="uid://dfabqgi4p0okc" path="res://font/title.tres" id="2_twydk"]
+
+[node name="main" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( "1_7t1us" )
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0745098, 0.137255, 0.160784, 1)
+
+[node name="label" type="Label" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+rect_min_size = Vector2(640, 0)
+size_flags_horizontal = 7
+size_flags_vertical = 11
+theme_override_fonts/font = ExtResource( "2_twydk" )
+theme_override_font_sizes/font_size = 72
+text = "Real Estate Online
+The multiplayer board game"
+align = 1
+autowrap_mode = 3
+
+[node name="container" type="HBoxContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="splitScreen" type="Button" parent="container"]
+offset_left = 181.0
+offset_top = 412.0
+offset_right = 437.0
+offset_bottom = 668.0
+rect_min_size = Vector2(256, 256)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 16
+text = "BUTTON_SPLIT_SCREEN_TYPE"
+clip_text = true
+
+[node name="LAN" type="Button" parent="container"]
+offset_left = 831.0
+offset_top = 412.0
+offset_right = 1087.0
+offset_bottom = 668.0
+rect_min_size = Vector2(256, 256)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+disabled = true
+text = "BUTTON_LAN_TYPE"
+clip_text = true
+
+[node name="steam" type="Button" parent="container"]
+offset_left = 1482.0
+offset_top = 412.0
+offset_right = 1738.0
+offset_bottom = 668.0
+rect_min_size = Vector2(256, 256)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 16
+disabled = true
+text = "BUTTON_ONLINE_TYPE"
+clip_text = true

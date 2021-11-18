@@ -1,5 +1,6 @@
-extends Node3D
+extends RigidDynamicBody3D
 
+const DICE_DEFAULT_POSITION_RANGE = 0.3
 const PERPANDICULAR_ANGLE = 90
 const NOT_IMPORTANT_ANGLE = -9999
 const EPSILON = 5.0
@@ -14,32 +15,36 @@ const DICE_VALUE = [
 const SLEEPING_VECTOR3 = Vector3(EPSILON, EPSILON, EPSILON) * 10.0
 
 func _ready():
-  $rigidBody.connect('body_entered', _play_sound, [])
-  $rigidBody.connect('body_shape_entered', _play_sound, [])
-  $rigidBody.set_freeze_enabled(false)
+  connect('body_entered', _play_sound, [])
+  # connect('body_shape_entered', _play_sound, [])
+  set_freeze_enabled(false)
 
   rotate_x(deg2rad(randi() % 180))
   rotate_y(deg2rad(randi() % 180))
   rotate_z(deg2rad(randi() % 180))
 
-func _play_sound(arg0 = null):
-  $soundFX.unit_db = lerp(-10.0, -8.0, $rigidBody.linear_velocity.normalized().x)
-  $soundFX.pitch_scale = lerp(0.95, 1.05, $rigidBody.angular_velocity.normalized().x)
+func _play_sound(arg0 = null, arg1 = null, arg2 = null, arg3 = null):
+  $soundFX.unit_db = lerp(-10.0, -8.0, linear_velocity.normalized().x)
+  $soundFX.pitch_scale = lerp(0.95, 1.05, angular_velocity.normalized().x)
   $soundFX.play()
 
 func is_entity_moving():
-  return abs($rigidBody.angular_velocity) > SLEEPING_VECTOR3 or \
-         abs($rigidBody.linear_velocity) > SLEEPING_VECTOR3
+  return abs(angular_velocity) > SLEEPING_VECTOR3 or \
+         abs(linear_velocity) > SLEEPING_VECTOR3
 
 func is_dice_broken():
   return get_value() > 6
 
+func reset_dice():
+  rotation = Vector3(deg2rad(randi() % 180), deg2rad(randi() % 180), deg2rad(randi() % 180))
+  position = Vector3(randf_range(-DICE_DEFAULT_POSITION_RANGE, DICE_DEFAULT_POSITION_RANGE), 0.5, randf_range(-DICE_DEFAULT_POSITION_RANGE, DICE_DEFAULT_POSITION_RANGE))
+
 func stop_dice():
-  $rigidBody.freeze = true
+  sleeping = true
 
 func get_value():
   var value = 1
-  var l_global_rotation = $rigidBody.global_transform.basis.get_euler()
+  var l_global_rotation = global_transform.basis.get_euler()
 
   l_global_rotation.x = int(round(rad2deg(l_global_rotation.x) / PERPANDICULAR_ANGLE)) * PERPANDICULAR_ANGLE
   l_global_rotation.y = int(round(rad2deg(l_global_rotation.y) / PERPANDICULAR_ANGLE)) * PERPANDICULAR_ANGLE

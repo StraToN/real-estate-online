@@ -114,7 +114,7 @@ Lorsqu'un festival a lieu dans une de vos villes, les loyers sont doublés.
 9. Grève des éboueurs sur un côté de plateau (vous choisissez lequel). Les loyers de ce bord ne rapportent rien pendant jusqu'au prochain tour de plateau.
 10. Un festival auto-organisé s'invite dans une ville, vous choisissez laquelle. Le festival dure jusqu'au prochain tour de plateau.
 11. Des streameurs organisent une campagne a but non lucratif en votre nom, vous percevez X$.
-12. A tout moment vous pouvez jouez cette carte pour remettre une case FAI en jeu (le propriétaire perd le FAI instantannément).
+12. A tout moment vous pouvez jouez cette carte pour remettre une case Merveille en jeu (le propriétaire perd la Merveille instantannément).
 
 ## Déroulement de la partie
 On choisit le mode de paiement des impôts. Chaque joueur peut choisir s'il paie proportionnellement a ses biens, ou alors s'il paie un montant fixe qui double tous les 3 tours.
@@ -124,7 +124,7 @@ On choisit le mode de paiement des impôts. Chaque joueur peut choisir s'il paie
 ## Fin de partie
 - La fin de partie intervient quand tous les joueurs sauf un ont fait faillite.
 - Ou alors lorsqu'il y a un monopole de côté (avec un hotel sur chaque ville pour que ça compte).
-- On possède les 4 FAI du jeu
+- On possède les 4 merveilles du jeu
 
 ## Acquisition de propriété
 Lorsque vous tombez sur une carte de terrain, vous pouvez l'acquérir pour le prix indiqué sur la carte. Si vous ne souhaitez pas l'acheter, alors la carte part à la vente aux enchères, pour un prix de départ au niveau de son hypothèque.
@@ -136,7 +136,7 @@ Dès qu'une propriété est acquise par un joueur il peut tout de suite construi
 
 Une fois que la propriété à 4 maisons, le joueur peut les remplacer par un hotel en payant le prix d'une maison.
 
-Pour pouvoir construire sur un terrain, le joueur doit se trouver sur la propriété ou une propriété du même groupe.
+Pour pouvoir construire sur un terrain, le joueur doit se trouver sur la propriété.
 
 ### Crise du batiment
 Il n'y a que 10 hotels disponibles ainsi que 40 maisons.

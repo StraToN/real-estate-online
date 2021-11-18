@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://tbf5g0b7vpyb"]
+[gd_scene load_steps=5 format=3 uid="uid://tbf5g0b7vpyb"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_7rg24"]
 [ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="1_mqqix"]
 [ext_resource type="Theme" uid="uid://byxq00om1rba6" path="res://theme/red.tres" id="3_0lw1e"]
 [ext_resource type="Font" uid="uid://dfabqgi4p0okc" path="res://font/title.tres" id="3_5xbph"]
-[ext_resource type="AudioStream" uid="uid://de4pnjmu2vaxg" path="res://assets/sound/click-0.wav" id="5_6hq06"]
 
 [node name="main" type="MarginContainer"]
 anchor_right = 1.0
@@ -23,7 +22,6 @@ __meta__ = {
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.0745098, 0.137255, 0.160784, 1)
-script = null
 
 [node name="container" type="VBoxContainer" parent="."]
 offset_right = 1920.0
@@ -31,9 +29,8 @@ offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
-script = null
 
-[node name="Label" type="Label" parent="container"]
+[node name="title" type="Label" parent="container"]
 offset_right = 1920.0
 offset_bottom = 186.0
 rect_min_size = Vector2(640, 0)
@@ -45,7 +42,6 @@ The multiplayer board game"
 align = 1
 valign = 1
 autowrap_mode = 3
-script = null
 
 [node name="top" type="HBoxContainer" parent="container"]
 offset_top = 186.0
@@ -55,9 +51,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 alignment = 1
-script = null
 
-[node name="original" type="Button" parent="container/top"]
+[node name="create" type="Button" parent="container/top"]
 offset_left = 352.0
 offset_top = 95.0
 offset_right = 608.0
@@ -67,11 +62,11 @@ grow_vertical = 2
 rect_min_size = Vector2(256, 256)
 size_flags_horizontal = 6
 size_flags_vertical = 6
+theme_override_font_sizes/font_size = 16
 disabled = true
-text = "BUTTON_ORIGINAL"
-script = null
+text = "BUTTON_CREATE_GAME"
 
-[node name="classic" type="Button" parent="container/top"]
+[node name="join" type="Button" parent="container/top"]
 offset_left = 1312.0
 offset_top = 95.0
 offset_right = 1568.0
@@ -82,8 +77,7 @@ rect_min_size = Vector2(256, 256)
 size_flags_horizontal = 6
 size_flags_vertical = 6
 disabled = true
-text = "BUTTON_CLASSIC"
-script = null
+text = "BUTTON_JOIN_GAME"
 
 [node name="bottom" type="HBoxContainer" parent="container"]
 offset_top = 633.0
@@ -92,7 +86,6 @@ offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
-script = null
 
 [node name="quit" type="Button" parent="container/bottom"]
 offset_left = 224.0
@@ -106,7 +99,6 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = ExtResource( "3_0lw1e" )
 text = "BUTTON_QUIT"
-script = null
 
 [node name="option" type="Button" parent="container/bottom"]
 offset_left = 864.0
@@ -119,7 +111,6 @@ rect_min_size = Vector2(192, 40)
 size_flags_horizontal = 6
 size_flags_vertical = 6
 text = "BUTTON_OPTIONS"
-script = null
 
 [node name="language" type="Button" parent="container/bottom"]
 offset_left = 1504.0
@@ -133,8 +124,3 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 disabled = true
 text = "BUTTON_LANGUAGE"
-script = null
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( "5_6hq06" )
-script = null

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bbuskrximfu0a"
+uid="uid://csy4ea0qi3ak"
 path="res://.godot/imported/dice.glb-c32c5533aaee6edb8aa91bf81169e8bc.scn"
 
 [deps]
@@ -23,20 +23,7 @@ meshes/light_baking=2
 meshes/lightmap_texel_size=0.1
 skins/use_named_skins=true
 animation/import=true
-animation/fps=15
+animation/fps=30
 import_script/path=""
 _subresources={
-"meshes": {
-"dice_Cube": {
-"save_to_file/enabled": true,
-"save_to_file/make_streamable": true,
-"save_to_file/path": "res://assets/3d/dice.tres"
-}
-},
-"nodes": {
-"PATH:Cube": {
-"generate/physics": true,
-"physics/body_type": 1
-}
-}
 }

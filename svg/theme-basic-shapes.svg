@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8101934"
-     inkscape:cx="-2521.4516"
-     inkscape:cy="-1265.0294"
+     inkscape:zoom="0.9050967"
+     inkscape:cx="-2927.6503"
+     inkscape:cy="-713.89499"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -58,7 +58,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1261,132 +1261,6 @@
          y="54.145981"
          style="fill:#132329;stroke-width:0.748451px"
          id="tspan1705">- Quand on fait faillite.</tspan></text>
-    <rect
-       style="fill:#f9dad3;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1709"
-       width="93.430992"
-       height="95.911461"
-       x="-348.00534"
-       y="640.31049"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#9af5eb;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1711"
-       width="93.430992"
-       height="95.911461"
-       x="-40.521069"
-       y="403.30078"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#704b2d;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1713"
-       width="93.430992"
-       height="95.911461"
-       x="252.931"
-       y="389.96201"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#561808;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1707"
-       width="93.430992"
-       height="95.911461"
-       x="584.49365"
-       y="401.39526"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#083a34;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1715"
-       width="93.430992"
-       height="95.911461"
-       x="-585.50342"
-       y="245.14157"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#765500;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1717"
-       width="93.430992"
-       height="95.911461"
-       x="-185.34155"
-       y="418.54507"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#835537;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1719"
-       width="93.430992"
-       height="95.911461"
-       x="123.35477"
-       y="399.48969"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#229b47;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1723"
-       width="93.430992"
-       height="95.911461"
-       x="1025.6245"
-       y="272.77179"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#b8e3f6;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1725"
-       width="93.430992"
-       height="95.911461"
-       x="-661.72473"
-       y="33.627438"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#28673b;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1729"
-       width="93.430992"
-       height="95.911461"
-       x="1024.6718"
-       y="184.16452"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#a4e5b8;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1731"
-       width="93.430992"
-       height="95.911461"
-       x="1028.4828"
-       y="365.19012"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#cff1d9;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1727"
-       width="93.430992"
-       height="95.911461"
-       x="1028.4828"
-       y="458.56125"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#fce8d7;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1016"
-       width="93.430992"
-       height="95.911461"
-       x="-360.13208"
-       y="519.04309"
-       rx="1.322906"
-       ry="1.322906" />
-    <rect
-       style="fill:#ed380b;fill-opacity:1;stroke:none;stroke-width:1"
-       id="rect1721"
-       width="93.430992"
-       height="95.911461"
-       x="414.57431"
-       y="393.07959"
-       rx="1.322906"
-       ry="1.322906" />
     <path
        id="rect873"
        style="fill:#ffffff;stroke:none;stroke-width:1.85289"
@@ -1404,5 +1278,73 @@
        inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/blank/white-circle-128x128.png"
        inkscape:export-xdpi="114.66"
        inkscape:export-ydpi="114.66" />
+    <g
+       id="g1028"
+       transform="translate(-80.201821)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/close-normal-128x128.png"
+       inkscape:export-xdpi="50.099998"
+       inkscape:export-ydpi="50.099998">
+      <circle
+         style="fill:#e76f51;stroke-width:4.4758"
+         id="path1019"
+         cx="-840.46545"
+         cy="-201.33138"
+         r="32.448189" />
+      <path
+         id="rect1021"
+         style="fill:#f9f4f3;fill-opacity:1;stroke-width:4.99999"
+         d="m -829.94175,-218.87094 -10.52373,10.52373 -10.52374,-10.52373 -7.01583,7.01582 10.52374,10.52374 -10.52374,10.52374 7.01583,7.01582 10.52374,-10.52374 10.52373,10.52374 7.01583,-7.01582 -10.52374,-10.52374 10.52374,-10.52374 z" />
+    </g>
+    <g
+       id="g1040"
+       transform="translate(7.0279947)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/close-hover-128x128.png"
+       inkscape:export-xdpi="50.099998"
+       inkscape:export-ydpi="50.099998">
+      <circle
+         style="fill:#e75531;fill-opacity:1;stroke-width:4.4758"
+         id="circle1036"
+         cx="-840.46545"
+         cy="-201.33138"
+         r="32.448189" />
+      <path
+         id="path1038"
+         style="fill:#f9dad3;fill-opacity:1;stroke-width:4.99999"
+         d="m -829.94175,-218.87094 -10.52373,10.52373 -10.52374,-10.52373 -7.01583,7.01582 10.52374,10.52374 -10.52374,10.52374 7.01583,7.01582 10.52374,-10.52374 10.52373,10.52374 7.01583,-7.01582 -10.52374,-10.52374 10.52374,-10.52374 z" />
+    </g>
+    <g
+       id="g1034"
+       transform="translate(93.844397)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/close-pressed-128x128.png"
+       inkscape:export-xdpi="50.099998"
+       inkscape:export-ydpi="50.099998">
+      <circle
+         style="fill:#f9dad3;stroke-width:4.4758"
+         id="circle1030"
+         cx="-840.46545"
+         cy="-201.33138"
+         r="32.448189" />
+      <path
+         id="path1032"
+         style="fill:#e76f51;fill-opacity:1;stroke-width:4.99999"
+         d="m -829.94175,-218.87094 -10.52373,10.52373 -10.52374,-10.52373 -7.01583,7.01582 10.52374,10.52374 -10.52374,10.52374 7.01583,7.01582 10.52374,-10.52374 10.52373,10.52374 7.01583,-7.01582 -10.52374,-10.52374 10.52374,-10.52374 z" />
+    </g>
+    <g
+       id="g1046"
+       transform="translate(187.6888)"
+       inkscape:export-filename="/home/binogure/work/github/xsellier/real-estate-online/game/assets/theme/button/close-disabled-128x128.png"
+       inkscape:export-xdpi="50.099998"
+       inkscape:export-ydpi="50.099998">
+      <circle
+         style="fill:#6a4b43;fill-opacity:1;stroke-width:4.4758"
+         id="circle1042"
+         cx="-840.46545"
+         cy="-201.33138"
+         r="32.448189" />
+      <path
+         id="path1044"
+         style="fill:#e79884;fill-opacity:1;stroke-width:4.99999"
+         d="m -829.94175,-218.87094 -10.52373,10.52373 -10.52374,-10.52373 -7.01583,7.01582 10.52374,10.52374 -10.52374,10.52374 7.01583,7.01582 10.52374,-10.52374 10.52373,10.52374 7.01583,-7.01582 -10.52374,-10.52374 10.52374,-10.52374 z" />
+    </g>
   </g>
 </svg>

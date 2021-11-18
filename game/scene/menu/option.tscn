@@ -1,0 +1,175 @@
+[gd_scene load_steps=5 format=3 uid="uid://doe48jwidfrk2"]
+
+[ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="1_5mdix"]
+[ext_resource type="Script" path="res://script/menu/option.gd" id="2_6wmam"]
+[ext_resource type="Font" uid="uid://dfabqgi4p0okc" path="res://font/title.tres" id="2_meolt"]
+[ext_resource type="Theme" uid="uid://byxq00om1rba6" path="res://theme/red.tres" id="3_necwi"]
+
+[node name="main" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( "1_5mdix" )
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource( "2_6wmam" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0745098, 0.137255, 0.160784, 1)
+
+[node name="container" type="VBoxContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 64
+
+[node name="title" type="Label" parent="container"]
+offset_right = 1920.0
+offset_bottom = 186.0
+rect_min_size = Vector2(640, 0)
+size_flags_horizontal = 7
+theme_override_fonts/font = ExtResource( "2_meolt" )
+theme_override_font_sizes/font_size = 72
+text = "Real Estate Online
+The multiplayer board game"
+align = 1
+valign = 1
+autowrap_mode = 3
+
+[node name="panelContainer" type="PanelContainer" parent="container"]
+offset_left = 640.0
+offset_top = 250.0
+offset_right = 1280.0
+offset_bottom = 730.0
+rect_min_size = Vector2(640, 480)
+size_flags_horizontal = 6
+size_flags_vertical = 5
+
+[node name="container" type="VBoxContainer" parent="container/panelContainer"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 633.0
+offset_bottom = 473.0
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="music" type="HBoxContainer" parent="container/panelContainer/container"]
+offset_top = 149.0
+offset_right = 626.0
+offset_bottom = 181.0
+rect_min_size = Vector2(0, 32)
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="key" type="Label" parent="container/panelContainer/container/music"]
+offset_left = 28.0
+offset_right = 284.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(256, 0)
+size_flags_horizontal = 6
+size_flags_vertical = 7
+theme_override_font_sizes/font_size = 16
+text = "LABEL_MUSIC"
+valign = 1
+
+[node name="value" type="HSlider" parent="container/panelContainer/container/music"]
+offset_left = 341.0
+offset_top = 8.0
+offset_right = 597.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(256, 0)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+value = 50.0
+rounded = true
+
+[node name="soundfx" type="HBoxContainer" parent="container/panelContainer/container"]
+offset_top = 213.0
+offset_right = 626.0
+offset_bottom = 245.0
+rect_min_size = Vector2(0, 32)
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="key" type="Label" parent="container/panelContainer/container/soundfx"]
+offset_left = 28.0
+offset_right = 284.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(256, 0)
+size_flags_horizontal = 6
+size_flags_vertical = 7
+theme_override_font_sizes/font_size = 16
+text = "LABEL_SOUNDFX"
+valign = 1
+
+[node name="value" type="HSlider" parent="container/panelContainer/container/soundfx"]
+offset_left = 341.0
+offset_top = 8.0
+offset_right = 597.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(256, 0)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+value = 50.0
+rounded = true
+
+[node name="bottom" type="HBoxContainer" parent="container/panelContainer/container"]
+offset_top = 277.0
+offset_right = 626.0
+offset_bottom = 317.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="back" type="Button" parent="container/panelContainer/container/bottom"]
+offset_left = 8.0
+offset_right = 200.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(192, 40)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource( "3_necwi" )
+theme_override_font_sizes/font_size = 16
+text = "BUTTON_BACK"
+
+[node name="reset" type="Button" parent="container/panelContainer/container/bottom"]
+offset_left = 216.0
+offset_right = 408.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(192, 40)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "BUTTON_RESET"
+
+[node name="apply" type="Button" parent="container/panelContainer/container/bottom"]
+offset_left = 425.0
+offset_right = 617.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2(192, 40)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "BUTTON_APPLY"

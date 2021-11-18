@@ -18,8 +18,10 @@ config/auto_accept_quit=false
 
 [autoload]
 
-soundfx_manager="*res://scene/soundfx-manager.tscn"
 logger="*res://script/logger.gd"
+globals_manager="*res://script/singleton/global-manager.gd"
+configuration_manager="*res://script/singleton/configuration-manager.gd"
+soundfx_manager="*res://scene/soundfx-manager.tscn"
 
 [debug]
 
