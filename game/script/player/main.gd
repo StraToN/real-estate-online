@@ -35,11 +35,14 @@ signal player_won(player_index)
 
 signal player_play_case(player_index, case_number, callback)
 
+signal player_world_tour_ended(player_index)
+signal currency_updated(currency)
+
 var __name = 0
 var __player_type = constant_utils.PLAYER_TYPE.HUMAN_LOCAL
 var __player_state = PLAYER_STATE.FREE
 var __number_of_turn = 0
-var __currency = 2000000
+var __currency = 200000
 
 func _ready():
   var player_index = get_index()
@@ -54,6 +57,7 @@ func _ready():
 
 func set_player_data(player_data):
   __name = player_data.name
+  __currency = player_data.currency
 
   $canvas/panel/container/container/name.set_text(player_data.name)
   $canvas/panel/container/container/currency.set_text(number_utils.format_currency(player_data.currency))
@@ -89,6 +93,7 @@ func _dice_threw(dice_1, dice_2):
   tween.tween_property(self, 'unit_offset', to_case, ANIMATION_DURATION).set_trans(Tween.TRANS_SINE)
 
   if to_case >= 1.0:
+    emit_signal('player_world_tour_ended', get_index())
     __number_of_turn += 1
 
   if dice_1 == dice_2:
@@ -102,6 +107,12 @@ func _dice_threw(dice_1, dice_2):
 func get_currency():
   return __currency
 
+func update_currency(costs):
+  __currency -= costs
+  $canvas/panel/container/container/currency.set_text(number_utils.format_currency(__currency))
+
+  emit_signal('currency_updated', __currency)
+
 func get_number_of_turn():
   return __number_of_turn
 
@@ -114,3 +125,6 @@ func _end_of_turn():
   # TODO
   # Not yet implemented
   emit_signal('player_end_of_turn', get_index())
+
+func get_player_color():
+  return player_color

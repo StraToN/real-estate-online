@@ -4,6 +4,8 @@ const common_colors_util = preload('res://script/util/common-colors.gd')
 static func get_data():
   return {
     currency = 200000,
+    world_tour_salary = 20000,
+
     wonders = [{
       name = 'LABEL_WONDER_EIFFEL_TOWER',
       case_id = '0e0d0f69-8b9e-43d8-9848-d1e932e1cadc',

@@ -53,6 +53,7 @@ func _ready():
     $players.get_node(node_index).connect('player_won', _player_won)
 
     $players.get_node(node_index).connect('player_play_case', _player_play_case)
+    $players.get_node(node_index).connect('player_world_tour_ended', _player_pay_salary)
 
     index += 1
 
@@ -67,75 +68,101 @@ func _setup_board():
     case_instance.set_case_data(static_data.get_data().cases[index])
     $cities.add_child(case_instance)
 
-func _player_play_case(player_index, case, callback):
-  var case_data = $cities.get_node(str(case)).get_case_data()
+func _initialize_property_data(case_node, case_data, player_index):
+  for index in range(0, 6):
+    var button_node = $'canvas/property/center/panel/container/options'.get_node(str(index))
+    var costs = case_node.compute_buy_cost(player_index, index)
 
-  if case_data.data.type == constant_utils.CASE_TYPE.PROPERTY:
-    $canvas/property/center/panel/container/actions/close.connect('pressed', _close_popup, [$canvas/property, callback], CONNECT_ONESHOT)
-    $canvas/property/center/panel/marginContainer/close.connect('pressed', _close_popup, [$canvas/property, callback], CONNECT_ONESHOT)
+    button_node.set_meta('houses', index)
+    button_node.set_meta('costs', costs)
+    button_node.set_meta('rent', case_node.compute_rent(index))
+    button_node.set_meta('buy_back', case_node.compute_buy_back(player_index, index))
+    button_node.set_pressed(false)
 
-    # Terrain sans proprio
-    # Achetable si on a l'argent
+    if index > 0:
+      button_node.visible = case_data.game.houses < index
 
-    # Terrain avec proprio
-    # - Nous sommes proprio
-    # - On a l'argent
-    # => On peut construire
-
-    # Terrain avec proprio
-    # - Nous ne sommes pas proprio
-    # - On l'argent
-    # - Cela n'est pas un hotel
-    # => On peut construire
-
-    var case_name = tr(case_data.data.name)
-    var player_own_property = case_data.game.owner == null or case_data.game.owner == player_index
-    var buyable = case_data.game.owner == null
-    var player_currency = $players.get_node(str(player_index)).get_currency()
-    var player_number_of_turn = $players.get_node(str(player_index)).get_number_of_turn()
-    var property_costs = case_data.data.costs.property if case_data.game.owner == null or case_data.game.owner == player_index else (case_data.data.costs.property + case_data.data.costs.house * case_data.game.houses) * (case_data.game.number_of_owners + 2)
-    var rent_costs = 0 if player_own_property else case_data.data.rent[case_data.game.houses]
-
-    $'canvas/property/center/panel/container/options/0'.button_group.connect('pressed', _update_property_costs)
-
-    for index in range(0, 6):
-      var button_node = $'canvas/property/center/panel/container/options'.get_node(str(index))
-      var costs = property_costs + case_data.data.costs.house * index
-
-      button_node.set_meta('costs', costs)
-      button_node.set_meta('rent', case_data.data.rent[index])
-      button_node.set_meta('buy_back', costs * (case_data.game.number_of_owners + 2))
-
-      if index > 0:
-        button_node.visible = case_data.game.houses < index
-        if index >= 5:
-          button_node.set_text('1 hôtel\n%s' % [
-            number_utils.format_currency(costs)
-          ])
-
-        else:
-          button_node.set_text('%s maison(s)\n%s' % [
-            index, number_utils.format_currency(costs)
-          ])
-
-      else:
-        button_node.visible = case_data.game.houses == 0
-        button_node.set_text('Terrain seul\n%s' % [
+      if index >= 5:
+        button_node.set_text('1 hôtel\n%s' % [
           number_utils.format_currency(costs)
         ])
 
-    if not player_own_property:
-      if rent_costs > player_currency:
-        # TODO
-        # Bankruptcy
-        pass
-
       else:
-        player_currency -= rent_costs
-        # TODO
-        # Give the money to the player (owner)
-        # L'argent doit partir vers le haut, et on voit le joueur qui reçoit cet argent faire un geste de remerciements
-        pass
+        button_node.set_text('%s maison(s)\n%s' % [
+          index, number_utils.format_currency(costs)
+        ])
+
+    else:
+      button_node.visible = case_data.game.houses == 0
+      button_node.set_text('Terrain seul\n%s' % [
+        number_utils.format_currency(costs)
+      ])
+
+func _player_pay_salary(player_index):
+  var player_node = $players.get_node(str(player_index))
+
+  player_node.update_currency(-static_data.get_data().world_tour_salary)
+
+func _player_play_case(player_index, case, callback):
+  var case_node = $cities.get_node(str(case % 36))
+  var case_data = case_node.get_case_data()
+  var case_name = tr(case_data.data.name)
+
+  if case_data.data.type == constant_utils.CASE_TYPE.PROPERTY:
+    # Note:
+    # First we need to disconnect everysingle signal since
+    # The popup is never deleted/created w are re-using the same scene
+    if $canvas/property/center/panel/container/actions/buy.is_connected('pressed', _buy_property):
+      $canvas/property/center/panel/container/actions/buy.disconnect('pressed', _buy_property)
+
+    if $canvas/property/center/panel/container/actions/close.is_connected('pressed', _close_popup):
+      $canvas/property/center/panel/container/actions/close.disconnect('pressed', _close_popup)
+
+    if $canvas/property/center/panel/container/actions/close.is_connected('pressed', _close_popup):
+      $canvas/property/center/panel/container/actions/close.disconnect('pressed', _close_popup)
+
+    if $canvas/property/center/panel/marginContainer/close.is_connected('pressed', _close_popup):
+      $canvas/property/center/panel/marginContainer/close.disconnect('pressed', _close_popup)
+
+    if $'canvas/property/center/panel/container/options/0'.button_group.is_connected('pressed', _update_property_costs):
+      $'canvas/property/center/panel/container/options/0'.button_group.disconnect('pressed', _update_property_costs)
+
+    var player_currency = $players.get_node(str(player_index)).get_currency()
+    var player_number_of_turn = $players.get_node(str(player_index)).get_number_of_turn()
+    var rental_costs = case_node.get_rent(player_index)
+
+    _initialize_property_data(case_node, case_data, player_index)
+
+    $canvas/property/center/panel/container/actions/buy.connect('pressed', _buy_property, [player_index, case_node, $canvas/property, callback], CONNECT_ONESHOT)
+    $canvas/property/center/panel/container/actions/buy.set_disabled(true)
+    $canvas/property/center/panel/container/title.set_text(case_name)
+    $canvas/property/animation.play('open')
+
+    # Note
+    # Player doesn't own the property
+    if rental_costs > 0:
+      $canvas/property/center/panel/marginContainer/close.visible = false
+
+      $canvas/property/center/panel/container/actions/buy.set_disabled(true)
+      $canvas/property/center/panel/container/actions/close.set_text('Payer %s' % [number_utils.format_currency(rental_costs)])
+      $canvas/property/center/panel/container/actions/close.connect('pressed', _pay_rent, [player_index, case_node, $canvas/property, callback], CONNECT_ONESHOT)
+      $'canvas/property/center/panel/container/options/0'.button_group.connect('pressed', _update_property_costs, [player_currency])
+
+    else:
+      $canvas/property/center/panel/container/actions/close.set_text('BUTTON_CLOSE')
+      $canvas/property/center/panel/marginContainer/close.visible = true
+
+      $canvas/property/center/panel/container/actions/close.connect('pressed', _close_popup, [$canvas/property, callback], CONNECT_ONESHOT)
+      $canvas/property/center/panel/marginContainer/close.connect('pressed', _close_popup, [$canvas/property, callback], CONNECT_ONESHOT)
+      $'canvas/property/center/panel/container/options/0'.button_group.connect('pressed', _update_property_costs, [player_currency])
+
+    if rental_costs > player_currency:
+      # TODO
+      # Open bankruptcy panel
+      pass
+
+    else:
+      pass
 
     if player_number_of_turn < 1:
       $'canvas/property/center/panel/container/options/1'.set_disabled(false)
@@ -165,15 +192,12 @@ func _player_play_case(player_index, case, callback):
       $'canvas/property/center/panel/container/options/4'.set_disabled(true)
       $'canvas/property/center/panel/container/options/5'.set_disabled(true)
 
-    $canvas/property/center/panel/container/title.set_text(case_name)
-    $canvas/property.visible = true
-    $canvas/property/animation.play('open')
   else:
     # TODO
     logger.debug('Not yet implemented')
     callback.call()
 
-func _update_property_costs(pressed_button):
+func _update_property_costs(pressed_button, player_currency):
   soundfx_manager.play_sound(soundfx_manager.FX.UI_CLICK)
 
   var cost_value = pressed_button.get_meta('costs')
@@ -183,6 +207,24 @@ func _update_property_costs(pressed_button):
   $canvas/property/center/panel/container/costs.set_text('Nouveau loyer: %s' % [number_utils.format_currency(rent_value)])
   $canvas/property/center/panel/container/actions/buy.set_text('Acheter pour %s' % [number_utils.format_currency(cost_value)])
   $canvas/property/center/panel/container/buyback.set_text('Pourra être racheté pour %s' % [number_utils.format_currency(buy_back)])
+  $canvas/property/center/panel/container/actions/buy.set_disabled(player_currency < cost_value)
+
+func _buy_property(player_index, case_node, popup_to_close, callback = null):
+  var pressed_button = $'canvas/property/center/panel/container/options/0'.button_group.get_pressed_button()
+  var number_of_houses = pressed_button.get_meta('houses')
+  var cost_value = pressed_button.get_meta('costs')
+  var player_node = $players.get_node(str(player_index))
+
+  player_node.update_currency(cost_value)
+  case_node.buy_property(player_node.get_player_color(), player_index, number_of_houses)
+  _close_popup(popup_to_close, callback)
+
+func _pay_rent(player_index, case_node, popup_to_close, callback = null):
+  var rent_costs = case_node.get_rent(player_index)
+  var player_node = $players.get_node(str(player_index))
+
+  player_node.update_currency(rent_costs)
+  _close_popup(popup_to_close, callback)
 
 func _close_popup(popup_to_close, callback = null):
   soundfx_manager.play_sound(soundfx_manager.FX.UI_CLICK)

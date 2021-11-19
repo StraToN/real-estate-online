@@ -4,7 +4,8 @@
 [ext_resource type="Script" path="res://script/player/main.gd" id="1_g7ncp"]
 [ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="3_6hoej"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpn6f"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1mr"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_fi2lm"]
 resource_name = "Idle"
@@ -198,7 +199,7 @@ bones/11/scale = Vector3(1, 1, 1)
 [node name="mesh" type="MeshInstance3D" parent="origin/skeleton"]
 gi_mode = 2
 mesh = ExtResource( "1_65pdo" )
-surface_material_override/1 = SubResource( "StandardMaterial3D_xpn6f" )
+surface_material_override/1 = SubResource( "StandardMaterial3D_rf1mr" )
 
 [node name="animationPlayer" type="AnimationPlayer" parent="origin"]
 autoplay = "Idle"
@@ -229,6 +230,7 @@ offset_bottom = 73.0
 rect_min_size = Vector2(64, 64)
 size_flags_horizontal = 4
 size_flags_vertical = 6
+color = Color(0, 0, 0, 1)
 
 [node name="container" type="VBoxContainer" parent="canvas/panel/container"]
 offset_left = 68.0
