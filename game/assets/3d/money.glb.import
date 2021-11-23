@@ -1,0 +1,36 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://jb7rkuu5nxms"
+path="res://.godot/imported/money.glb-15a1714023f564c70af7caeb49dcbcfe.scn"
+
+[deps]
+
+source_file="res://assets/3d/money.glb"
+dest_files=["res://.godot/imported/money.glb-15a1714023f564c70af7caeb49dcbcfe.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=2
+meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+import_script/path=""
+_subresources={
+"meshes": {
+"money_Cylinder": {
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": true,
+"save_to_file/path": "res://assets/3d/money.tres"
+}
+}
+}

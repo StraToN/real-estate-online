@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://crxyqlkqno1wu"]
+
+[ext_resource type="ArrayMesh" uid="uid://c78c5l1fqr0pg" path="res://assets/3d/money.tres" id="1_txx4q"]
+
+[sub_resource type="ParticlesMaterial" id="ParticlesMaterial_5gjqf"]
+direction = Vector3(1, 1, 1)
+spread = 90.0
+gravity = Vector3(0, 0, 0)
+damping_min = 0.1
+damping_max = 0.5
+angle_max = 90.0
+
+[node name="main" type="Node3D"]
+transform = Transform3D(1, 0, 0, -7.10543e-15, 1, 0, -7.94093e-23, 0, 1, 0, 0, 0)
+
+[node name="particle" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, -3.37508e-14, 1, 0, -2.24993e-22, -8.88178e-16, 1, 0, 4.51165e-08, 0)
+layers = 2
+gi_mode = 1
+emitting = false
+amount = 128
+lifetime = 1.6
+one_shot = true
+randomness = 0.05
+local_coords = false
+process_material = SubResource( "ParticlesMaterial_5gjqf" )
+draw_pass_1 = ExtResource( "1_txx4q" )
+
+[node name="attractor" type="GPUParticlesAttractorBox" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.99682e-24)
+visible = false
+strength = 2.0
+extents = Vector3(2, 2, 2)

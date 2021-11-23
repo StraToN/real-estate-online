@@ -74,11 +74,13 @@ func _process(delta):
 func _reset_moving_dices():
   for node in dice_nodes:
     if node.is_entity_moving():
+      logger.debug('Dice still moving, resetting position')
       node.reset_dice()
 
 func _reset_broken_dices():
   for node in dice_nodes:
     if node.is_dice_broken():
+      logger.debug('Dice broken, resetting position')
       node.reset_dice()
 
 func _dice_threw():

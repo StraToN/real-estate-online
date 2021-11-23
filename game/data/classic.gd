@@ -5,6 +5,7 @@ static func get_data():
   return {
     currency = 200000,
     world_tour_salary = 20000,
+    number_of_cases = 36,
 
     wonders = [{
       name = 'LABEL_WONDER_EIFFEL_TOWER',

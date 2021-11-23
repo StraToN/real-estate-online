@@ -53,6 +53,9 @@ func _ready():
 
   standard_material.albedo_color = player_color
   $origin/skeleton/mesh.set_surface_override_material(1, standard_material)
+
+  $origin/skeleton/mesh/active.set_material_override(standard_material)
+  $origin/skeleton/mesh/active.visible = false
   $canvas/panel/container/color.color = player_color
 
 func set_player_data(player_data):
@@ -75,6 +78,8 @@ func set_player_data(player_data):
     __player_type = constant_utils.PLAYER_TYPE.COMPUTER_REMOTE
 
 func begin_turn():
+  $origin/skeleton/mesh/active.visible = true
+
   # Instanciate dices
   # Change camera
   var dice_scene_instance = DICE_SCENE.instantiate()
@@ -125,6 +130,7 @@ func _end_of_turn():
   # TODO
   # Not yet implemented
   emit_signal('player_end_of_turn', get_index())
+  $origin/skeleton/mesh/active.visible = false
 
 func get_player_color():
   return player_color

@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cteukbhqw3bbc"]
+[gd_scene load_steps=9 format=3 uid="uid://cteukbhqw3bbc"]
 
 [ext_resource type="ArrayMesh" uid="uid://take8bm05mnt" path="res://assets/3d/character-0.tres" id="1_65pdo"]
 [ext_resource type="Script" path="res://script/player/main.gd" id="1_g7ncp"]
 [ext_resource type="Theme" uid="uid://3jk5cncrjgh2" path="res://theme/main.tres" id="3_6hoej"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rf1mr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vsqb"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_fi2lm"]
@@ -99,6 +99,61 @@ tracks/5/path = NodePath("skeleton:Bone.009")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -0.663875, 5.47344e-09, 8.43386e-08, 0.747844, 0.2, 1, -0.653822, -0.12965, -0.115093, 0.73652, 0.333333, 1, -0.627396, -0.244484, -0.217033, 0.706752, 0.4, 1, -0.619116, -0.269946, -0.239635, 0.697424, 0.666667, 1, -0.649192, -0.156413, -0.13885, 0.731304, 0.8, 1, -0.663209, -0.0334703, -0.0297121, 0.747095, 0.933333, 1, -0.65781, 0.100853, 0.0895294, 0.741012, 1.06667, 1, -0.635097, 0.217797, 0.193342, 0.715426, 1.26667, 1, -0.612153, 0.289395, 0.256901, 0.68958, 1.4, 1, -0.639141, 0.202228, 0.179521, 0.719982, 1.46667, 1, -0.653801, 0.129784, 0.115212, 0.736496, 1.65, 1, -0.663875, 5.47344e-09, 8.43386e-08, 0.747844)
+
+[sub_resource type="Animation" id="Animation_73osc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("origin/skeleton/mesh/active:radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("origin/skeleton/mesh/active:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ww7r"]
+resource_name = "active"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("origin/skeleton/mesh/active:radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [1.0, 2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("origin/skeleton/mesh/active:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
 
 [node name="0" type="PathFollow3D"]
 transform = Transform3D(0.998422, 0, -0.0561532, 0, 1, 0, 0.0561621, 0, 0.998263, 0.689821, 0, -0.0635131)
@@ -197,14 +252,27 @@ bones/11/rotation = Quaternion(-0.663875, 5.47344e-09, 8.43385e-08, 0.747844)
 bones/11/scale = Vector3(1, 1, 1)
 
 [node name="mesh" type="MeshInstance3D" parent="origin/skeleton"]
+transform = Transform3D(1, 0, 7.45058e-09, 0, 1, 0, 3.72529e-09, 0, 1, 0, 0.1, 0)
 gi_mode = 2
 mesh = ExtResource( "1_65pdo" )
-surface_material_override/1 = SubResource( "StandardMaterial3D_rf1mr" )
+surface_material_override/1 = SubResource( "StandardMaterial3D_7vsqb" )
+
+[node name="active" type="CSGCylinder3D" parent="origin/skeleton/mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+radius = 2.0
+height = 0.1
+sides = 4
 
 [node name="animationPlayer" type="AnimationPlayer" parent="origin"]
 autoplay = "Idle"
 anims/Idle = SubResource( "Animation_fi2lm" )
 anims/Walk = SubResource( "Animation_7fr4a" )
+
+[node name="active" type="AnimationPlayer" parent="origin"]
+root_node = NodePath("../..")
+autoplay = "active"
+anims/RESET = SubResource( "Animation_73osc" )
+anims/active = SubResource( "Animation_8ww7r" )
 
 [node name="canvas" type="CanvasLayer" parent="."]
 
