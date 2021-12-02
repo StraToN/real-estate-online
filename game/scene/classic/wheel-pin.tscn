@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbqbht1ly2bfi"]
+
+[ext_resource type="Texture2D" uid="uid://xcgvr2wcs401" path="res://assets/theme/icon/wheel-pin-128x128.png" id="1_j7d1j"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ar8n"]
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqta4"]
+radius = 21.5407
+
+[node name="0" type="AnimatableBody2D"]
+position = Vector2(2.70776, -484.141)
+disable_mode = 1
+physics_material_override = SubResource( "PhysicsMaterial_6ar8n" )
+sync_to_physics = false
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_aqta4" )
+
+[node name="sprite2D" type="Sprite2D" parent="collision"]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource( "1_j7d1j" )

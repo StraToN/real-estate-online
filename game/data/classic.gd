@@ -6,6 +6,9 @@ static func get_data():
     currency = 200000,
     world_tour_salary = 20000,
     number_of_cases = 36,
+    number_of_double_before_jail = 3,
+    number_of_turn_in_prison = 4,
+    prison_costs = 5000,
 
     wonders = [{
       name = 'LABEL_WONDER_EIFFEL_TOWER',
@@ -310,7 +313,10 @@ static func get_data():
         shadow = common_colors_util.DARK_YELLOW_COLOR
       },
       name = 'LABEL_CASE_AIRPORT',
-      type = constant_utils.CASE_TYPE.AIRPORT
+      type = constant_utils.CASE_TYPE.AIRPORT,
+      costs = {
+        flight = 5000
+      }
     }, {
       id = '63e8c09e-bc44-4e3a-b535-e1dcd5727a9e',
       color = {
@@ -419,7 +425,8 @@ static func get_data():
         shadow = common_colors_util.DARK_YELLOW_COLOR
       },
       name = 'LABEL_CASE_OLYMPICS',
-      type = constant_utils.CASE_TYPE.OLYMPICS
+      type = constant_utils.CASE_TYPE.OLYMPICS,
+      rent_ratio = 0.5
     }, {
       id = 'bedbbc33-b49c-44c0-9799-38016a9a45e7',
       color = {
@@ -500,7 +507,8 @@ static func get_data():
         shadow = common_colors_util.BLACK_COLOR
       },
       name = 'LABEL_CASE_FESTIVAL',
-      type = constant_utils.CASE_TYPE.FESTIVAL
+      type = constant_utils.CASE_TYPE.FESTIVAL,
+      rent_ratio = 0.25
     }, {
       id = '0e0d0f69-8b9e-43d8-9848-d1e932e1cadc',
       color = {

@@ -1,5 +1,10 @@
 extends Node3D
 
+enum CASE_EVENT_TYPE {
+  EVENT_PLAYER_MOVE,
+  EVENT_GAME_PLACE
+}
+
 const constant_utils = preload('res://script/util/constants.gd')
 const number_utils = preload('res://script/util/number.gd')
 
@@ -50,6 +55,9 @@ func _ready():
     $players.get_node(node_index).connect('player_end_of_turn', _player_end_of_turn)
     $players.get_node(node_index).connect('player_bankrupt', _player_bankrupt)
     $players.get_node(node_index).connect('player_won', _player_won)
+    $players.get_node(node_index).connect('player_jailed', _player_jailed)
+
+    $players.get_node(node_index).connect('player_in_jail', _player_in_jail)
 
     $players.get_node(node_index).connect('player_play_case', _player_play_case)
     $players.get_node(node_index).connect('player_world_tour_ended', _player_pay_salary)
@@ -78,6 +86,7 @@ func _setup_board():
 
     case_instance.set_name(str(index))
     case_instance.set_case_data(static_data.cases[index])
+
     $cities.add_child(case_instance)
 
 func _initialize_property_data(case_node, case_data, player_index):
@@ -110,6 +119,56 @@ func _initialize_property_data(case_node, case_data, player_index):
         number_utils.format_currency(costs)
       ])
 
+func _player_in_jail(player_index, throw_dice_callback, end_of_turn_callback):
+  # TODO
+  # Gerer la faillite
+
+  var player_node = $players.get_node(str(player_index))
+  var prison_costs = static_data.prison_costs
+  var turn_in_prison_left = player_node.get_turn_in_prison_left()
+
+  # Note:
+  # First we need to disconnect everysingle signal since
+  # The popup is never deleted/created w are re-using the same scene
+  if $canvas/inJail/center/panel/container/actions/pay.is_connected('pressed', _jail_pay):
+    $canvas/inJail/center/panel/container/actions/pay.disconnect('pressed', _jail_pay)
+
+  if $canvas/inJail/center/panel/container/actions/throwDices.is_connected('pressed', _jail_throw_dices):
+    $canvas/inJail/center/panel/container/actions/throwDices.disconnect('pressed', _jail_throw_dices)
+
+  $canvas/inJail/center/panel/container/title.set_text('Tour en prison restant: %s' % [
+    turn_in_prison_left
+  ])
+
+  if turn_in_prison_left > 0:
+    $canvas/inJail/center/panel/container/richTextLabel.set_text('Vous êtes en prison. Pour sortir vous pouvez essayer de lancer les dés pour faire un double.\nOu vous pouvez payer $%s immédiatement pour sortir au prochain tour. Que voulez-vous faire?' % [
+      number_utils.format(prison_costs)
+    ])
+
+    $canvas/inJail/center/panel/container/actions/pay.connect('pressed', _jail_pay, [player_index, $canvas/inJail, end_of_turn_callback], CONNECT_ONESHOT)
+    $canvas/inJail/center/panel/container/actions/throwDices.connect('pressed', _jail_throw_dices, [player_index, $canvas/inJail, throw_dice_callback], CONNECT_ONESHOT)
+    $canvas/inJail/center/panel/container/actions/throwDices.visible = true
+
+  else:
+    $canvas/inJail/center/panel/container/actions/throwDices.visible = false
+    $canvas/inJail/center/panel/container/richTextLabel.set_text('Vous êtes en prison. Vous devez immédiatement payer $%s pour pouvoir sortir au prochain tour.' % [
+      number_utils.format(prison_costs)
+    ])
+
+    $canvas/inJail/center/panel/container/actions/pay.connect('pressed', _jail_pay, [player_index, $canvas/inJail, end_of_turn_callback], CONNECT_ONESHOT)
+
+  $canvas/inJail/animation.play('open')
+
+func _jail_pay(player_index, popup_to_close, callback):
+  var prison_costs = static_data.prison_costs
+
+  $players.get_node(str(player_index)).free_player()
+  emit_signal('currency_moving', player_index, constant_utils.BANK_ID, prison_costs)
+  _close_popup(popup_to_close, callback)
+
+func _jail_throw_dices(player_index, popup_to_close, callback):
+  _close_popup(popup_to_close, callback)
+
 func _player_pay_salary(player_index):
   var currency = static_data.world_tour_salary
 
@@ -121,9 +180,6 @@ func _play_property(player_index, case_node, case_data, case_name, callback):
   # The popup is never deleted/created w are re-using the same scene
   if $canvas/property/center/panel/container/actions/buy.is_connected('pressed', _buy_property):
     $canvas/property/center/panel/container/actions/buy.disconnect('pressed', _buy_property)
-
-  if $canvas/property/center/panel/container/actions/close.is_connected('pressed', _close_popup):
-    $canvas/property/center/panel/container/actions/close.disconnect('pressed', _close_popup)
 
   if $canvas/property/center/panel/container/actions/close.is_connected('pressed', _close_popup):
     $canvas/property/center/panel/container/actions/close.disconnect('pressed', _close_popup)
@@ -206,21 +262,18 @@ func _play_wonder(player_index, case_node, case_data, case_name, callback):
   if $canvas/wonder/center/panel/container/actions/close.is_connected('pressed', _close_popup):
     $canvas/wonder/center/panel/container/actions/close.disconnect('pressed', _close_popup)
 
-  if $canvas/wonder/center/panel/container/actions/close.is_connected('pressed', _close_popup):
-    $canvas/wonder/center/panel/container/actions/close.disconnect('pressed', _close_popup)
-
   if $canvas/wonder/center/panel/marginContainer/close.is_connected('pressed', _close_popup):
     $canvas/wonder/center/panel/marginContainer/close.disconnect('pressed', _close_popup)
 
   var player_currency = $players.get_node(str(player_index)).get_currency()
 
   # Initialize the popup
-  var linked_property = case_node.get_case_with_wonder()
+  var wonder_case_data = case_node.get_case_data_with_wonder()
   var owned_wonders = get_cases_owned_by_player_and_type(player_index)
 
   $canvas/wonder/center/panel/container/title.set_text(case_name)
   $canvas/wonder/center/panel/container/richTextLabel.text = 'Si vous possédez également %s, alors le loyer de %s sera doublé' % [
-    tr(linked_property.name), tr(linked_property.name)
+    tr(wonder_case_data.name), tr(wonder_case_data.name)
   ]
 
   for index in range(0, 4):
@@ -265,6 +318,37 @@ func _play_wonder(player_index, case_node, case_data, case_name, callback):
     # Nothing to do
     callback.call()
 
+func _play_airport(player_index, case_node, case_data, case_name, callback):
+  # Note:
+  # First we need to disconnect everysingle signal since
+  # The popup is never deleted/created w are re-using the same scene
+  if $canvas/airport/center/panel/container/actions/buy.is_connected('pressed', _buy_airport_ticket):
+    $canvas/airport/center/panel/container/actions/buy.disconnect('pressed', _buy_airport_ticket)
+
+  if $canvas/airport/center/panel/container/actions/close.is_connected('pressed', _close_popup):
+    $canvas/airport/center/panel/container/actions/close.disconnect('pressed', _close_popup)
+
+  if $canvas/airport/center/panel/marginContainer/close.is_connected('pressed', _close_popup):
+    $canvas/airport/center/panel/marginContainer/close.disconnect('pressed', _close_popup)
+
+  var player_currency = $players.get_node(str(player_index)).get_currency()
+  var airport_buy_costs = case_node.get_buy_price(player_index)
+
+  $canvas/airport/center/panel/container/title.set_text(case_name)
+  $canvas/airport/center/panel/container/richTextLabel.text = 'Vous pouvez choisir d\'acheter un billet d\'avion pour seulement $%s. Grâce à lui, vous pourrez voyager ou bon vous semble' % [
+    number_utils.format(airport_buy_costs)
+  ]
+
+  $canvas/airport/animation.play('open')
+  $canvas/airport/center/panel/container/actions/close.set_text('BUTTON_CLOSE')
+  $canvas/airport/center/panel/marginContainer/close.visible = true
+
+  $canvas/airport/center/panel/container/actions/buy.connect('pressed', _buy_airport_ticket, [player_index, case_node, $canvas/airport, callback], CONNECT_ONESHOT)
+  $canvas/airport/center/panel/container/actions/buy.set_disabled(airport_buy_costs > player_currency)
+  $canvas/airport/center/panel/container/actions/buy.set_text('Acheter un billet pour %s' % [number_utils.format_currency(airport_buy_costs)])
+  $canvas/airport/center/panel/container/actions/close.connect('pressed', _close_popup, [$canvas/airport, callback], CONNECT_ONESHOT)
+  $canvas/airport/center/panel/marginContainer/close.connect('pressed', _close_popup, [$canvas/airport, callback], CONNECT_ONESHOT)
+
 func _player_play_case(player_index, case, callback):
   var case_node = $cities.get_node(str(case % 36))
   var case_data = case_node.get_case_data()
@@ -276,10 +360,43 @@ func _player_play_case(player_index, case, callback):
   elif case_data.data.type == constant_utils.CASE_TYPE.WONDER:
     _play_wonder(player_index, case_node, case_data, case_name, callback)
 
+  elif case_data.data.type == constant_utils.CASE_TYPE.AIRPORT:
+    _play_airport(player_index, case_node, case_data, case_name, callback)
+
+  elif case_data.data.type == constant_utils.CASE_TYPE.OLYMPICS:
+    _play_olympics(player_index, case_node, case_data, case_name, callback)
+
+  elif case_data.data.type == constant_utils.CASE_TYPE.BEGIN:
+    _play_begin(player_index, case_node, case_data, case_name, callback)
+
+  elif case_data.data.type == constant_utils.CASE_TYPE.FESTIVAL:
+    logger.warning('Not yet implemented')
+    callback.call()
+
+  elif case_data.data.type == constant_utils.CASE_TYPE.TAXES:
+    logger.warning('Not yet implemented')
+    callback.call()
+
+  elif case_data.data.type == constant_utils.CASE_TYPE.WHEEL:
+    logger.warning('Not yet implemented')
+    callback.call()
+
   else:
     # TODO
-    logger.debug('Not yet implemented')
+    logger.warning('Not yet implemented')
     callback.call()
+
+func _play_begin(player_index, case_node, case_data, case_name, callback):
+  _player_pay_salary(player_index)
+  callback.call()
+
+func _play_olympics(player_index, case_node, case_data, case_name, callback):
+  for child_node in $cities.get_children():
+    if child_node.is_connected('case_selected', _case_selected):
+      child_node.disconnect('case_selected', _case_selected)
+
+    child_node.set_input_event_collision(player_index, constant_utils.CASE_TYPE.OLYMPICS, true)
+    child_node.connect('case_selected', _case_selected, [CASE_EVENT_TYPE.EVENT_GAME_PLACE, player_index, case_node, callback], CONNECT_ONESHOT)
 
 func _update_property_costs(pressed_button, player_currency):
   soundfx_manager.play_sound(soundfx_manager.FX.UI_CLICK)
@@ -294,6 +411,40 @@ func _update_property_costs(pressed_button, player_currency):
   $canvas/property/center/panel/container/actions/buy.set_text('Acheter pour %s' % [number_utils.format_currency(cost_value)])
   $canvas/property/center/panel/container/buyback.set_text('Pourra être racheté pour %s' % [number_utils.format_currency(buy_back)])
   $canvas/property/center/panel/container/actions/buy.set_disabled(player_currency < cost_value)
+
+func _case_selected(case_node, event_type, player_index, original_case, callback):
+  # Disable the input_event collision event for all the cases
+  for child_node in $cities.get_children():
+    child_node.set_input_event_collision(player_index, constant_utils.CASE_TYPE.BEGIN, false)
+
+  match event_type:
+    CASE_EVENT_TYPE.EVENT_GAME_PLACE:
+      var previous_node = original_case.get_olympic_case()
+
+      if previous_node != null:
+        previous_node.organize_event(player_index, null)
+
+      original_case.organize_event(player_index, case_node)
+      case_node.organize_event(player_index, original_case)
+      callback.call()
+
+    CASE_EVENT_TYPE.EVENT_PLAYER_MOVE:
+      var case_index = str(case_node.get_name()).to_int()
+
+      $players.get_node(str(player_index)).player_move_to(case_index, callback)
+
+func _buy_airport_ticket(player_index, case_node, popup_to_close, callback = null):
+  var airport_buy_costs = case_node.get_buy_price(player_index)
+
+  emit_signal('currency_moving', player_index, constant_utils.BANK_ID, airport_buy_costs)
+  _close_popup(popup_to_close)
+
+  for child_node in $cities.get_children():
+    if child_node.is_connected('case_selected', _case_selected):
+      child_node.disconnect('case_selected', _case_selected)
+
+    child_node.set_input_event_collision(player_index, constant_utils.CASE_TYPE.AIRPORT, true)
+    child_node.connect('case_selected', _case_selected, [CASE_EVENT_TYPE.EVENT_PLAYER_MOVE, player_index, case_node, callback], CONNECT_ONESHOT)
 
 func _buy_wonder(player_index, case_node, popup_to_close, callback = null):
   var player_node = $players.get_node(str(player_index))
@@ -341,17 +492,51 @@ func _player_end_of_turn(player_index):
 
   $players.get_node(str(next_player_index)).begin_turn()
 
+func _player_jailed(player_index, callback):
+  # Note:
+  # First we need to disconnect everysingle signal since
+  # The popup is never deleted/created w are re-using the same scene
+  if $canvas/jail/center/panel/container/actions/close.is_connected('pressed', _close_popup):
+    $canvas/jail/center/panel/container/actions/close.disconnect('pressed', _close_popup)
+
+  if $canvas/jail/center/panel/marginContainer/close.is_connected('pressed', _close_popup):
+    $canvas/jail/center/panel/marginContainer/close.disconnect('pressed', _close_popup)
+
+  var player_node = $players.get_node(str(player_index))
+
+  $canvas/jail/center/panel/container/richTextLabel.text = 'Allez directement en prison, ne passez pas par la case départ, ne recevez pas $%s.\nVous resterez au plus %s tours en prison.' % [
+    number_utils.format(static_data.world_tour_salary), player_node.get_turn_in_prison_left()
+  ]
+
+  $canvas/jail/animation.play('open')
+  $canvas/jail/center/panel/container/actions/close.set_text('BUTTON_CLOSE')
+  $canvas/jail/center/panel/marginContainer/close.visible = true
+
+  $canvas/jail/center/panel/container/actions/close.connect('pressed', _close_popup, [$canvas/jail, callback], CONNECT_ONESHOT)
+  $canvas/jail/center/panel/marginContainer/close.connect('pressed', _close_popup, [$canvas/jail, callback], CONNECT_ONESHOT)
+
 func _player_bankrupt(player_index):
-  pass
+  # TODO
+  logger.error('Not yet implemented')
 
 func _player_won(player_index):
-  pass
+  # TODO
+  logger.error('Not yet implemented')
 
 func get_cases_owned_by_player_and_type(player_index, case_type = constant_utils.CASE_TYPE.WONDER):
-  var owned_cases = []
+  var filtered_cases = []
 
   for case_node in $cities.get_children():
     if case_node.get_type() == case_type and case_node.get_case_owner() == player_index:
-      owned_cases.push_back(case_node)
+      filtered_cases.push_back(case_node)
 
-  return owned_cases
+  return filtered_cases
+
+func get_cases_by_type(case_type = constant_utils.CASE_TYPE.PROPERTY):
+  var filtered_cases = []
+
+  for case_node in $cities.get_children():
+    if case_node.get_type() == case_type:
+      filtered_cases.push_back(case_node)
+
+  return filtered_cases

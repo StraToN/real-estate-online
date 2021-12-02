@@ -81,11 +81,16 @@ func is_particle_emitting():
          get_node('3/particle').emitting
 
 func _run_animation():
-  if __running_animation and __queued_events.size() > 0:
+  if __running_animation:
+    return
+
+  __delta_acc = 0.0
+
+  if __queued_events.size() < 1:
+    _call_next()
     return
 
   __running_animation = true
-  __delta_acc = 0.0
 
   var event_data = __queued_events[0]
   var from_node = get_node('bank') if constant_utils.BANK_ID == event_data.from else get_node(str(event_data.from))
@@ -106,3 +111,4 @@ func set_callback(callback):
     logger.warning('Overwritting a callback')
 
   __callback = callback
+  _call_next()

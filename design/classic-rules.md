@@ -22,11 +22,11 @@ On peut alors choisir de changer sa méthode d'imposition (proportionnelle/fixe)
 ##### Prison
 Les joueurs sont envoyés en prison soit via des cartes hasards/anarchies ou lorsqu'ils ont fait 3 doubles d'affilés.
 
-Pour sortir le joueur doit soit faire un double et il sortira immédiatement mais ne rejoue pas, il avance quand même.
+Pour sortir le joueur doit soit faire un double et il sortira immédiatement mais ne rejoue pas, il avance pas.
 
-Soit s'acquitter d'une amende de X $, et sortira au tour d'après. Si le joueur lance les dès et qu'aucun double n'est fait, il peut alors payer pour sortir au prochain tour.
+Soit s'acquitter d'une amende de X $, et sortira au tour d'après.
 
-Au bout de 3 tours, le joueur doit payer pour sortir
+Au bout de 3 tours, le joueur doit payer pour sortir.
 
 ###### Action spéciale
 Soudoyer le maton pour éteindre la caméra pendant 1 lancé de dés.
@@ -81,7 +81,7 @@ Pas de montant minumum
 #### Case Festival
 La case festival permet de nommer aléatoirement 3 villes du plateau dont les revenus sont doublés. Les villes sont choisies au hasard.
 
-S'ils le souhaitent, les jooueurs peuvent enchérir pour choisir ou un festival va se dérouler. Les deux autres seront placés aléatoirement.
+S'ils le souhaitent, les joueurs peuvent enchérir pour choisir ou un festival va se dérouler. Les deux autres seront placés aléatoirement.
 
 #### Évènements spéciaux
 Lorsqu'un festival a lieu dans une de vos villes, les loyers sont doublés.

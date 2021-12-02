@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dikcdbtn4e8qt"
+uid="uid://bqr6sf66r8kee"
 path="res://.godot/imported/plateau-case.glb-c94fa0e61712065d2caf61ccefb3e6d2.scn"
 
 [deps]
@@ -26,4 +26,11 @@ animation/import=true
 animation/fps=30
 import_script/path=""
 _subresources={
+"meshes": {
+"plateau-case_Cylinder": {
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": true,
+"save_to_file/path": "res://assets/3d/plateau-case.tres"
+}
+}
 }

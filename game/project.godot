@@ -6,7 +6,7 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
@@ -15,6 +15,7 @@ config/description="A monopoly like FOSS game"
 run/main_scene="res://scene/main.tscn"
 config/icon="res://icon.png"
 config/auto_accept_quit=false
+config/features=PackedStringArray("4.0")
 
 [autoload]
 
@@ -26,6 +27,9 @@ soundfx_manager="*res://scene/soundfx-manager.tscn"
 [debug]
 
 file_logging/max_log_files=10
+gdscript/warnings/unreachable_code=false
+gdscript/warnings/unreachable_pattern=false
+gdscript/warnings/empty_file=false
 
 [display]
 
@@ -37,6 +41,10 @@ window/vsync/vsync_mode=2
 [editor]
 
 node_naming/name_casing=1
+
+[gui]
+
+theme/use_hidpi=true
 
 [importer_defaults]
 
