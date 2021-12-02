@@ -86,12 +86,12 @@ S'ils le souhaitent, les joueurs peuvent enchérir pour choisir ou un festival v
 #### Évènements spéciaux
 Lorsqu'un festival a lieu dans une de vos villes, les loyers sont doublés.
 
-#### Cartes hasards (à jouer immédiatement)
+#### Cartes hasards (à jouer immédiatement sur soi)
 1. Erreur en votre faveur, la banque vous verse des dividendes de X$.
 2. Rendez-vous X rue
 3. Reculez de trois cases
 4. Allez en prison, ne passez pas par la case départ, ne recevez pas votre salaire.
-5. Vous avez une carte sortie de prison, peut etre vendue ou alors utilisée.
+5. Vous faites la bamboche et amenez vos potos, le prochain loyer sera payé double.
 6. Vous gagnez une protection, elle protège la ville que vous souhaitez du prochain effet qui lui serait appliqué.
 7. Vous jouez en bourse, et vous perdez immédiatement la moitié de votre argent liquide.
 8. Vous passez en mode d'impôsition proportionel
@@ -100,20 +100,19 @@ Lorsqu'un festival a lieu dans une de vos villes, les loyers sont doublés.
 11. Une émission de télé vient rénover une de vos villes. Vous pouvez construire une maison gratuitement sur une de vos villes.
 12. Du a une épidémie tous les festivals et autres spectacles sont annulés pendant 2 tours (jeux olympiques, festival et gares ne sont plus accessible, leurs loyers sont nuls).
 13. Un de vos locataires vous fait faux bonds, le prochain loyer ne sera pas perçu.
-14. Vous faites la bamboche et amenez vos potos, le prochain loyer sera payé double.
 
 #### Cartes anarchies (a jouer quand on le souhaite)
 1. Des jeunes squattent votre logement, l'habitation n'est plus aux normes, vous perdez un batiment.
-2. Un vieil oncle décède, vous léguant la moitié de sa fortune. Mais pour la recevoir vous devez engager la somme de X$. Une fois payé, le joueur reçoit un revenu qui est entre [X * 0.5, X * 2].
-3. Vous pouvez soudoyer le notaire pour X$, ce qui va permettre de libérer une rue au hasard sur la ligne ciblée.
-4. Vous pouvez prendre une carte dans la main d'un de vos concurrents.
-5. Vous pouvez annuler les prochains jeux olympiques, ils retournent alors sur leur case de base.
-6. Vous forcez un de vos camarades a jouer en bourse pour qu'il perde la moitié de son argent liquide. (à jouer sur un adversaire)
-7. Vous forcez un de vos camarades a passer en mode d'impôsition proportionnel.
+2. Vous pouvez soudoyer le notaire pour X$, ce qui va permettre de libérer une rue au hasard sur la ligne ciblée.
+3. Vous pouvez prendre une carte dans la main d'un de vos concurrents.
+4. Vous pouvez annuler les prochains jeux olympiques, ils retournent alors sur leur case de base.
+5. Vous forcez un de vos camarades a jouer en bourse pour qu'il perde la moitié de son argent liquide. (à jouer sur un adversaire)
+6. Vous forcez un de vos camarades a passer en mode d'impôsition proportionnel.
+7. Vous avez une carte sortie de prison, peut etre vendue ou alors utilisée.
 8. Vous forcez un de vos camarades a passer en mode d'impôsition fixe.
 9. Grève des éboueurs sur un côté de plateau (vous choisissez lequel). Les loyers de ce bord ne rapportent rien pendant jusqu'au prochain tour de plateau.
 10. Un festival auto-organisé s'invite dans une ville, vous choisissez laquelle. Le festival dure jusqu'au prochain tour de plateau.
-11. Des streameurs organisent une campagne a but non lucratif en votre nom, vous percevez X$.
+11. Des streameurs organisent une campagne a but non lucrative en votre nom, vous percevez X$.
 12. A tout moment vous pouvez jouez cette carte pour remettre une case Merveille en jeu (le propriétaire perd la Merveille instantannément).
 
 ## Déroulement de la partie

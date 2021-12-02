@@ -10,6 +10,201 @@ static func get_data():
     number_of_turn_in_prison = 4,
     prison_costs = 5000,
 
+    cards = {
+      anarchy = [{
+        title = 'LABEL_CARD_ANARCHY_0_TITLE',
+        description = 'LABEL_CARD_ANARCHY_0_DESCRIPTION',
+        effects = [{
+          house = -1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_1_TITLE',
+        description = 'LABEL_CARD_ANARCHY_1_DESCRIPTION',
+        effects = [{
+          currency = -50000,
+          free_property = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_2_TITLE',
+        description = 'LABEL_CARD_ANARCHY_2_DESCRIPTION',
+        effects = [{
+          steal_card = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_3_TITLE',
+        description = 'LABEL_CARD_ANARCHY_3_DESCRIPTION',
+        effects = [{
+          cancel_olympics = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_4_TITLE',
+        description = 'LABEL_CARD_ANARCHY_4_DESCRIPTION',
+        effects = [{
+          currency_loss_ratio = 0.5
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_5_TITLE',
+        description = 'LABEL_CARD_ANARCHY_5_DESCRIPTION',
+        effects = [{
+          taxes_mode = 0
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_6_TITLE',
+        description = 'LABEL_CARD_ANARCHY_6_DESCRIPTION',
+        effects = [{
+          taxes_mode = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_7_TITLE',
+        description = 'LABEL_CARD_ANARCHY_7_DESCRIPTION',
+        effects = [{
+          jail = false
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_8_TITLE',
+        description = 'LABEL_CARD_ANARCHY_8_DESCRIPTION',
+        effects = [{
+          side_no_rent = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_9_TITLE',
+        description = 'LABEL_CARD_ANARCHY_9_DESCRIPTION',
+        effects = [{
+          festival = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_10_TITLE',
+        description = 'LABEL_CARD_ANARCHY_10_DESCRIPTION',
+        effects = [{
+          currency = 50000
+        }]
+      }, {
+        title = 'LABEL_CARD_ANARCHY_11_TITLE',
+        description = 'LABEL_CARD_ANARCHY_11_DESCRIPTION',
+        effects = [{
+          free_wonder = 1
+        }]
+      }],
+
+      random = [{
+        title = 'LABEL_CARD_RANDOM_0_TITLE',
+        description = 'LABEL_CARD_RANDOM_0_DESCRIPTION',
+        effects = [{
+          currency = 20000
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_1_TITLE',
+        description = 'LABEL_CARD_RANDOM_1_DESCRIPTION',
+        effects = [{
+          case_index = 35
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_2_TITLE',
+        description = 'LABEL_CARD_RANDOM_2_DESCRIPTION',
+        effects = [{
+          move_player = -3
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_3_TITLE',
+        description = 'LABEL_CARD_RANDOM_3_DESCRIPTION',
+        effects = [{
+          jail = true
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_4_TITLE',
+        description = 'LABEL_CARD_RANDOM_4_DESCRIPTION',
+        effects = [{
+          rent_cost_ratio = 2.0
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_5_TITLE',
+        description = 'LABEL_CARD_RANDOM_5_DESCRIPTION',
+        effects = [{
+          protect_case = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_6_TITLE',
+        description = 'LABEL_CARD_RANDOM_6_DESCRIPTION',
+        effects = [{
+          currency_loss_ratio = 0.5
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_7_TITLE',
+        description = 'LABEL_CARD_RANDOM_7_DESCRIPTION',
+        effects = [{
+          taxes_mode = 0
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_8_TITLE',
+        description = 'LABEL_CARD_RANDOM_8_DESCRIPTION',
+        effects = [{
+          taxes_mode = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_9_TITLE',
+        description = 'LABEL_CARD_RANDOM_9_DESCRIPTION',
+        effects = [{
+          turn_with_no_rent_on_case = 2
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_10_TITLE',
+        description = 'LABEL_CARD_RANDOM_10_DESCRIPTION',
+        effects = [{
+          free_house = 1
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_11_TITLE',
+        description = 'LABEL_CARD_RANDOM_11_DESCRIPTION',
+        effects = [{
+          turn_with_pandemie = 2
+        }]
+      }, {
+        title = 'LABEL_CARD_RANDOM_12_TITLE',
+        description = 'LABEL_CARD_RANDOM_12_DESCRIPTION',
+        effects = [{
+          next_rent_canceled = 1
+        }]
+      }]
+    },
+
+    wheel = [{
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.RANDOM
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.ANARCHY
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.RANDOM
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.ANARCHY
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.RANDOM
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.AIRPORT
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.ANARCHY
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.RANDOM
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.ANARCHY
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.RANDOM
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.ANARCHY
+    }, {
+      icon = 'res://....png',
+      type = constant_utils.CARD_TYPE.PRISON
+    }],
+
     wonders = [{
       name = 'LABEL_WONDER_EIFFEL_TOWER',
       case_id = '0e0d0f69-8b9e-43d8-9848-d1e932e1cadc',

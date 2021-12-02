@@ -334,9 +334,9 @@ __meta__ = {
 
 [node name="panel" type="PanelContainer" parent="canvas/property/center"]
 offset_left = 640.0
-offset_top = 269.0
+offset_top = 257.0
 offset_right = 1280.0
-offset_bottom = 811.0
+offset_bottom = 822.0
 rect_min_size = Vector2(640, 480)
 
 [node name="container" type="VBoxContainer" parent="canvas/property/center/panel"]
@@ -534,9 +534,9 @@ __meta__ = {
 
 [node name="panel" type="PanelContainer" parent="canvas/wonder/center"]
 offset_left = 730.0
-offset_top = 330.0
+offset_top = 326.0
 offset_right = 1190.0
-offset_bottom = 750.0
+offset_bottom = 754.0
 rect_min_size = Vector2(460, 420)
 
 [node name="0" type="TextureRect" parent="canvas/wonder/center/panel"]
@@ -700,9 +700,9 @@ __meta__ = {
 
 [node name="panel" type="PanelContainer" parent="canvas/airport/center"]
 offset_left = 730.0
-offset_top = 330.0
+offset_top = 326.0
 offset_right = 1190.0
-offset_bottom = 750.0
+offset_bottom = 754.0
 rect_min_size = Vector2(460, 420)
 
 [node name="0" type="TextureRect" parent="canvas/airport/center/panel"]
@@ -829,9 +829,9 @@ __meta__ = {
 
 [node name="panel" type="PanelContainer" parent="canvas/jail/center"]
 offset_left = 730.0
-offset_top = 330.0
+offset_top = 326.0
 offset_right = 1190.0
-offset_bottom = 750.0
+offset_bottom = 754.0
 rect_min_size = Vector2(460, 420)
 
 [node name="0" type="TextureRect" parent="canvas/jail/center/panel"]
@@ -946,9 +946,9 @@ __meta__ = {
 
 [node name="panel" type="PanelContainer" parent="canvas/inJail/center"]
 offset_left = 730.0
-offset_top = 330.0
+offset_top = 326.0
 offset_right = 1190.0
-offset_bottom = 750.0
+offset_bottom = 754.0
 rect_min_size = Vector2(460, 420)
 
 [node name="0" type="TextureRect" parent="canvas/inJail/center/panel"]

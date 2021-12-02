@@ -1,0 +1,144 @@
+en:
+  BUTTON_ORIGINAL: Original rules
+  BUTTON_CLASSIC: Classic rules
+  BUTTON_QUIT: Quit
+  BUTTON_OPTIONS: Options
+  BUTTON_LANGUAGE: Language
+  BUTTON_CREATE_GAME: Create lobby
+  BUTTON_JOIN_GAME: Join a lobby
+  BUTTON_JOIN: Join
+  BUTTON_SPLIT_SCREEN_TYPE: Split screen
+  BUTTON_LAN_TYPE: Local game
+  BUTTON_ONLINE_TYPE: Online game
+
+  LABEL_IP_ADDRESS: IP Address
+
+  LABEL_CASE_AIRPORT: Airport
+  LABEL_CASE_ALGER: Alger
+  LABEL_CASE_BEGIN: Begin
+  LABEL_CASE_BERLIN: Berlin
+  LABEL_CASE_BOMBAY: Bombay
+  LABEL_CASE_BUENOSAIRES: Buenos Aires
+  LABEL_CASE_CASABLANCA: Casablanca
+  LABEL_CASE_DAKAR: Dakar
+  LABEL_CASE_FESTIVAL: Festival
+  LABEL_CASE_HONGKONG: Hong-Kong
+  LABEL_CASE_JAKARTA: Jakarta
+  LABEL_CASE_KINSHASA: Kinshasa
+  LABEL_CASE_LECAIRE: Le Caire
+  LABEL_CASE_LONDRES: London
+  LABEL_CASE_LOSANGELES: Los Angeles
+  LABEL_CASE_MADRID: Madrid
+  LABEL_CASE_MEXICO: Mexico
+  LABEL_CASE_MONTREAL: Montréal
+  LABEL_CASE_NEWYORK: New-York
+  LABEL_CASE_OLYMPICS: Olympics
+  LABEL_CASE_PARIS: Paris
+  LABEL_CASE_PEKIN: Pékin
+  LABEL_CASE_PRISON: Prison
+  LABEL_CASE_ROME: Rome
+  LABEL_CASE_SAOPOLO: Sao Polo
+  LABEL_CASE_SEOUL: Seoul
+  LABEL_CASE_TAXES: Taxes
+  LABEL_CASE_TOKYO: Tokyo
+  LABEL_CASE_WHEEL: Wheel
+  LABEL_CASE_WONDER: Wonder
+
+  LABEL_WONDER_EIFFEL_TOWER: Eiffel tower
+  LABEL_WONDER_PYRAMIDS: Pyramids
+  LABEL_WONDER_OLYMPIC_STADIUM: Olympic stadium
+  LABEL_WONDER_EMPIRE_STATE_BUILDING: Empire State Building
+  LABEL_WONDER_HOLLYWOOD: Hollywood
+  LABEL_WONDER_ZOCALO: Zocalo
+  LABEL_WONDER_AVENIDA_PAULISTA: Avenida Paulista
+  LABEL_WONDER_LA_CASA_ROSADA: La casa rosada
+  LABEL_WONDER_PLAZA_MAYOR: Plaza Mayor
+  LABEL_WONDER_COLISEE: Colosseum
+  LABEL_WONDER_BRANDEBOURG_GATE: Brandenburg Gate
+  LABEL_WONDER_BIG_BEN: Big Ben
+  LABEL_WONDER_RUELLES_DE_LA_CASBAH: Casbah of Algiers
+  LABEL_WONDER_MOSQUÉE_HASSAN: Hassan II Mosque
+  LABEL_WONDER_BACARY_TRAORÉ: African Renaissance Monument
+  LABEL_WONDER_NYIRAGONGO: Nyiragongo
+  LABEL_WONDER_LES_JARDINS_SECRETS: Changdeokgung
+  LABEL_WONDER_LA_CITÉ_INTERDITE: Forbidden City
+  LABEL_WONDER_LE_FORT_DE_TUNG_CHUNG: Tung Chung Fort
+  LABEL_WONDER_MONUMENT_NASIONAL: National Monument
+  LABEL_WONDER_SHIBUYA: Shibuya
+
+  LABEL_CARD_ANARCHY_0_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_0_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_1_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_1_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_2_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_2_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_3_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_3_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_4_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_4_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_5_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_5_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_6_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_6_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_7_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_7_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_8_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_8_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_9_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_9_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_10_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_10_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_ANARCHY_11_TITLE: Not yet translated
+  LABEL_CARD_ANARCHY_11_DESCRIPTION: |
+    Not yet translated
+
+  LABEL_CARD_RANDOM_0_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_0_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_1_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_1_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_2_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_2_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_3_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_3_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_4_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_4_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_5_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_5_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_6_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_6_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_7_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_7_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_8_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_8_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_9_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_9_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_10_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_10_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_11_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_11_DESCRIPTION: |
+    Not yet translated
+  LABEL_CARD_RANDOM_12_TITLE: Not yet translated
+  LABEL_CARD_RANDOM_12_DESCRIPTION: |
+    Not yet translated

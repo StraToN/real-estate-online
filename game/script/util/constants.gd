@@ -23,3 +23,10 @@ enum CASE_TYPE {
   FESTIVAL,
   WHEEL
 }
+
+enum CARD_TYPE {
+  RANDOM,
+  ANARCHY,
+  PRISON,
+  AIRPORT
+}

@@ -19,7 +19,7 @@ __meta__ = {
 
 [node name="circles" type="AnimatableBody2D" parent="."]
 position = Vector2(960, 540)
-rotation = 0.253413
+rotation = 0.261799
 collision_layer = 0
 collision_mask = 0
 sync_to_physics = false
@@ -92,14 +92,26 @@ scale = Vector2(0.33, 0.33)
 texture = ExtResource( "3_s5veg" )
 offset = Vector2(0, 120)
 
+[node name="anchor" type="Node2D" parent="pin/triangle/collision/sprite"]
+position = Vector2(0, 242.424)
+
 [node name="pinTriangleJoin" type="PinJoint2D" parent="pin"]
 node_a = NodePath("..")
 node_b = NodePath("../triangle")
 bias = 0.2
-softness = 0.1
 
 [node name="pinHeadTriangleJoin" type="PinJoint2D" parent="pin"]
 position = Vector2(0, 80)
 node_a = NodePath("../triangle")
 node_b = NodePath("../pinHead")
 softness = 16.0
+
+[node name="result" type="Label" parent="."]
+offset_left = 832.0
+offset_top = 508.0
+offset_right = 1088.0
+offset_bottom = 572.0
+rect_min_size = Vector2(256, 64)
+theme_override_font_sizes/font_size = 16
+align = 1
+valign = 1

@@ -1,0 +1,201 @@
+fr:
+  BUTTON_ORIGINAL: Règles originales
+  BUTTON_CLASSIC: Règles classiques
+  BUTTON_QUIT: Quitter
+  BUTTON_OPTIONS: Options
+  BUTTON_LANGUAGE: Langue
+  BUTTON_CREATE_GAME: Créer une partie
+  BUTTON_JOIN_GAME: Rejoindre une partie
+  BUTTON_JOIN: Rejoindre
+  BUTTON_SPLIT_SCREEN_TYPE: Écran partagé
+  BUTTON_LAN_TYPE: Réseau local
+  BUTTON_ONLINE_TYPE: Partie en ligne
+
+  LABEL_IP_ADDRESS: Adresse IP
+
+  LABEL_CASE_AIRPORT: Aéroport
+  LABEL_CASE_ALGER: Alger
+  LABEL_CASE_BEGIN: Départ
+  LABEL_CASE_BERLIN: Berlin
+  LABEL_CASE_BOMBAY: Bombay
+  LABEL_CASE_BUENOSAIRES: Buenos Aires
+  LABEL_CASE_CASABLANCA: Casablanca
+  LABEL_CASE_DAKAR: Dakar
+  LABEL_CASE_FESTIVAL: Festival
+  LABEL_CASE_HONGKONG: Hong-Kong
+  LABEL_CASE_JAKARTA: Jakarta
+  LABEL_CASE_KINSHASA: Kinshasa
+  LABEL_CASE_LECAIRE: Le Caire
+  LABEL_CASE_LONDRES: Londres
+  LABEL_CASE_LOSANGELES: Los Angeles
+  LABEL_CASE_MADRID: Madrid
+  LABEL_CASE_MEXICO: Mexico
+  LABEL_CASE_MONTREAL: Montréal
+  LABEL_CASE_NEWYORK: New-York
+  LABEL_CASE_OLYMPICS: Jeux Olympiques
+  LABEL_CASE_PARIS: Paris
+  LABEL_CASE_PEKIN: Pékin
+  LABEL_CASE_PRISON: Prison
+  LABEL_CASE_ROME: Rome
+  LABEL_CASE_SAOPOLO: Sao Polo
+  LABEL_CASE_SEOUL: Seoul
+  LABEL_CASE_TAXES: Taxes
+  LABEL_CASE_TOKYO: Tokyo
+  LABEL_CASE_WHEEL: Roue
+  LABEL_CASE_WONDER: Merveille
+
+  LABEL_WONDER_EIFFEL_TOWER: Tour eiffel
+  LABEL_WONDER_PYRAMIDS: Pyramides
+  LABEL_WONDER_OLYMPIC_STADIUM: Stade olympique
+  LABEL_WONDER_EMPIRE_STATE_BUILDING: Empire State Building
+  LABEL_WONDER_HOLLYWOOD: Hollywood
+  LABEL_WONDER_ZOCALO: Zocalo
+  LABEL_WONDER_AVENIDA_PAULISTA: Avenida Paulista
+  LABEL_WONDER_LA_CASA_ROSADA: La casa rosada
+  LABEL_WONDER_PLAZA_MAYOR: Plaza Mayor
+  LABEL_WONDER_COLISEE: Colisée
+  LABEL_WONDER_BRANDEBOURG_GATE: Porte de Brandebourg
+  LABEL_WONDER_BIG_BEN: Big Ben
+  LABEL_WONDER_RUELLES_DE_LA_CASBAH: Casbah d'Alger
+  LABEL_WONDER_MOSQUÉE_HASSAN: Mosquée Hassan-II
+  LABEL_WONDER_BACARY_TRAORÉ: Monument de la Renaissance africaine
+  LABEL_WONDER_NYIRAGONGO: Nyiragongo
+  LABEL_WONDER_LES_JARDINS_SECRETS: Changdeokgung
+  LABEL_WONDER_LA_CITÉ_INTERDITE: Cité interdite
+  LABEL_WONDER_LE_FORT_DE_TUNG_CHUNG: Fort de Tung Chung
+  LABEL_WONDER_MONUMENT_NASIONAL: Monumen Nasional
+  LABEL_WONDER_SHIBUYA: Shibuya
+
+  LABEL_CARD_RANDOM_0_TITLE: Banque
+  LABEL_CARD_RANDOM_0_DESCRIPTION: |
+    Erreur en votre faveur, la banque vous verse
+    des dividendes de [b]$%s[/b].
+  LABEL_CARD_RANDOM_1_TITLE: Agence de voyage
+  LABEL_CARD_RANDOM_1_DESCRIPTION: |
+    Rendez-vous à [b]%s[/b].
+  LABEL_CARD_RANDOM_2_TITLE: Agence de voyage
+  LABEL_CARD_RANDOM_2_DESCRIPTION: |
+    Veuillez reculer de [b]%s[/b] cases
+  LABEL_CARD_RANDOM_3_TITLE: Décision de justice
+  LABEL_CARD_RANDOM_3_DESCRIPTION: |
+    [b]%s[/b] trouve que vous vous en sortez un peu trop bien, il a saisi le tribunal.
+    Ce dernier vient de rendre son verdict:
+    \tAllez en prison, ne passez pas par la case départ, ne revez pas [b]$%s[/b]!
+  LABEL_CARD_RANDOM_4_TITLE: WaterBnB
+  LABEL_CARD_RANDOM_4_DESCRIPTION: |
+    Vous faites la bamboche, vous amenez tous vos potos,
+    le prochain loyer à payer sera doublé.
+  LABEL_CARD_RANDOM_5_TITLE: Sécurité des territoires
+  LABEL_CARD_RANDOM_5_DESCRIPTION: |
+    Le prefet de votre région vous aime bien, il met à disposition un régiment de police
+    complet pour protéger une de vos rues d'éventuelles catastrophes.
+
+    Veuillez choisir la rue à protéger
+  LABEL_CARD_RANDOM_6_TITLE: Jouer comporte des risques
+  LABEL_CARD_RANDOM_6_DESCRIPTION: |
+    Vous jouez en bourse, et ça ne vous réussit pas vraiment.
+
+    Vous perdez immédiatement la moitié de vos liquidités, soit [b]$%s[/b].
+  LABEL_CARD_RANDOM_7_TITLE: Finances publiques
+  LABEL_CARD_RANDOM_7_DESCRIPTION: |
+    Vous passez en mode d'impôsition proportionel.
+
+    Lorsque vous tomberez sur la case Taxes & Impôts vous paierez
+    une taxe proportionnelle à votre patrimoine financier.
+  LABEL_CARD_RANDOM_8_TITLE: Finances publiques
+  LABEL_CARD_RANDOM_8_DESCRIPTION: |
+    Vous passez en mode d'impôsition fixe.
+
+    Lorsque vous tomberez sur la case Taxes & Impôts vous paierez
+    un montant forfaitaire fixe de [b]$%s[/b].
+  LABEL_CARD_RANDOM_9_TITLE: Préfet de police
+  LABEL_CARD_RANDOM_9_DESCRIPTION: |
+    Il y a des manifestations dans [b]%s[/b], cette dernière ne vous
+    rapportera rien durant vos deux prochains tours.
+  LABEL_CARD_RANDOM_10_TITLE: MOVE DA BUS
+  LABEL_CARD_RANDOM_10_DESCRIPTION: |
+    Une émission de télé-réalité s'est installe dans une de vos villes.
+    Ils entament de grands chantiers pour vous construire une maison.
+
+    Veuillez sélectionner une ville dans laquelle l'évènement se produira.
+  LABEL_CARD_RANDOM_11_TITLE: Organisation Mondiale de la Santé
+  LABEL_CARD_RANDOM_11_DESCRIPTION: |
+    Dû à une épidémie, tous les festivals et autres spectacles sont annulés pendant les 2 prochains tours.
+
+    Cela inclut: Les jeux olympiques, les festivals ainsi que les merveilles.
+  LABEL_CARD_RANDOM_12_TITLE: Les locataires mécontents
+  LABEL_CARD_RANDOM_12_DESCRIPTION: |
+    Un de vos locataires vous fait faux-bonds, le prochain loyer ne sera pas perçu.
+
+  LABEL_CARD_ANARCHY_0_TITLE: Polisse nationale
+  LABEL_CARD_ANARCHY_0_DESCRIPTION: |
+    Des jeunes squattent votre logement, l'habitation n'est plus aux normes, vous perdez un batiment.
+
+    [i]À jouer durant le début de son tour, sur un adversaire.[/i]
+  LABEL_CARD_ANARCHY_1_TITLE: Office notarié
+  LABEL_CARD_ANARCHY_1_DESCRIPTION: |
+    Vous pouvez soudoyer le notaire pour [b]$%s[/b], ce qui va permettre de libérer une ville
+    au hasard sur le côte du plateau de votre choix
+
+    [i]À jouer durant le début de son tour,[/i]
+  LABEL_CARD_ANARCHY_2_TITLE: Huissier de justice
+  LABEL_CARD_ANARCHY_2_DESCRIPTION: |
+    Dû a un malentendu mal vu, vous pouvez prendre une carte
+    dans la main d'un de vos concurrents.
+
+    [i]À jouer durant le début de son tour, sur un adversaire.[/i]
+  LABEL_CARD_ANARCHY_3_TITLE: Comite mondial du fun
+  LABEL_CARD_ANARCHY_3_DESCRIPTION: |
+    Vous pouvez faire annuler les prochains jeux olympiques, ils retournent alors
+    sur leur case de base.
+
+    [i]À jouer durant le début de son tour, sur une case où se déroulent des jeux olympiques.[/i]
+  LABEL_CARD_ANARCHY_4_TITLE: Jouer comporte des risques
+  LABEL_CARD_ANARCHY_4_DESCRIPTION: |
+    Vous forcez un de vos camarades à jouer en bourse afin qu'il perde la moitié
+    de son argent liquide.
+
+    [i]À jouer durant le début de son tour, sur un adversaire.[/i]
+  LABEL_CARD_ANARCHY_5_TITLE: Finances publiques
+  LABEL_CARD_ANARCHY_5_DESCRIPTION: |
+    Vous forcez un de vos camarades à passer en mode d'impôsition proportionnel.
+
+    Lorsqu'il tombera sur la case Taxes & Impôts il paiera
+    une taxe proportionnelle à son patrimoine financier.
+
+    [i]À jouer durant le début de son tour, sur un adversaire.[/i]
+  LABEL_CARD_ANARCHY_6_TITLE: Décision de justice
+  LABEL_CARD_ANARCHY_6_DESCRIPTION: |
+    Vous sortez immédiatement de prison.
+
+    [i]À jouer durant le début de son tour.[/i]
+  LABEL_CARD_ANARCHY_7_TITLE: Finances publiques
+  LABEL_CARD_ANARCHY_7_DESCRIPTION: |
+    Vous forcez un de vos camarades à passer en mode d'impôsition fixe.
+
+    Lorsqu'il tombera sur la case Taxes & Impôts il devra payer
+    un montant forfaitaire fixe de [b]$%s[/b].
+
+    [i]À jouer durant le début de son tour, sur un adversaire.[/i]
+  LABEL_CARD_ANARCHY_8_TITLE: Syndicats
+  LABEL_CARD_ANARCHY_8_DESCRIPTION: |
+    Il y a une grève des éboueurs sur un côte du plateau. Les loyers de ce bord
+    ne rapportent rien jusqu'au prochain tour de plateau.
+
+    [i]À jouer durant le début de son tour, sur un côté de plateau.[/i]
+  LABEL_CARD_ANARCHY_9_TITLE: Fête de la musique
+  LABEL_CARD_ANARCHY_9_DESCRIPTION: |
+    Un festival spontanné auto-organise s'invite dans une ville.
+
+    [i]À jouer durant le début de son tour, sur une ville.[/i]
+  LABEL_CARD_ANARCHY_10_TITLE: Justine TV
+  LABEL_CARD_ANARCHY_10_DESCRIPTION: |
+    Des streamers connus organisent une campagne à but non-lucratif en votre nom, vous percevez [b]$%s[/b]
+
+    [i]À jouer durant le début de son tour.[/i]
+  LABEL_CARD_ANARCHY_11_TITLE: Décision d'injustice
+  LABEL_CARD_ANARCHY_11_DESCRIPTION: |
+    Vous pouvez jouer cette carte pour remttre une Merveille en jeu.
+    Le propriétaire perd la merveille instantannément.
+
+    [i]À jouer durant le début de son tour, sur une case merveille[/i]

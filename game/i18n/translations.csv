@@ -10,7 +10,7 @@ BUTTON_JOIN,"Join","Rejoindre"
 BUTTON_SPLIT_SCREEN_TYPE,"Split screen","Écran partagé"
 BUTTON_LAN_TYPE,"Local game","Réseau local"
 BUTTON_ONLINE_TYPE,"Online game","Partie en ligne"
-LABEL_IP_ADDRESS,"IP Address", "Adresse IP"
+LABEL_IP_ADDRESS,"IP Address","Adresse IP"
 LABEL_CASE_AIRPORT,"Airport","Aéroport"
 LABEL_CASE_ALGER,"Alger","Alger"
 LABEL_CASE_BEGIN,"Begin","Départ"
@@ -62,3 +62,111 @@ LABEL_WONDER_LA_CITÉ_INTERDITE,"Forbidden City","Cité interdite"
 LABEL_WONDER_LE_FORT_DE_TUNG_CHUNG,"Tung Chung Fort","Fort de Tung Chung"
 LABEL_WONDER_MONUMENT_NASIONAL,"National Monument","Monumen Nasional"
 LABEL_WONDER_SHIBUYA,"Shibuya","Shibuya"
+LABEL_CARD_ANARCHY_0_TITLE,"Not yet translated","Polisse nationale"
+LABEL_CARD_ANARCHY_0_DESCRIPTION,"Not yet translated","Des jeunes squattent votre logement, l'habitation n'est plus aux normes, vous perdez un batiment.
+
+[i]À jouer durant le début de son tour, sur un adversaire.[/i]"
+LABEL_CARD_ANARCHY_1_TITLE,"Not yet translated","Office notarié"
+LABEL_CARD_ANARCHY_1_DESCRIPTION,"Not yet translated","Vous pouvez soudoyer le notaire pour [b]$%s[/b], ce qui va permettre de libérer une ville
+au hasard sur le côte du plateau de votre choix
+
+[i]À jouer durant le début de son tour,[/i]"
+LABEL_CARD_ANARCHY_2_TITLE,"Not yet translated","Huissier de justice"
+LABEL_CARD_ANARCHY_2_DESCRIPTION,"Not yet translated","Dû a un malentendu mal vu, vous pouvez prendre une carte
+dans la main d'un de vos concurrents.
+
+[i]À jouer durant le début de son tour, sur un adversaire.[/i]"
+LABEL_CARD_ANARCHY_3_TITLE,"Not yet translated","Comite mondial du fun"
+LABEL_CARD_ANARCHY_3_DESCRIPTION,"Not yet translated","Vous pouvez faire annuler les prochains jeux olympiques, ils retournent alors
+sur leur case de base.
+
+[i]À jouer durant le début de son tour, sur une case où se déroulent des jeux olympiques.[/i]"
+LABEL_CARD_ANARCHY_4_TITLE,"Not yet translated","Jouer comporte des risques"
+LABEL_CARD_ANARCHY_4_DESCRIPTION,"Not yet translated","Vous forcez un de vos camarades à jouer en bourse afin qu'il perde la moitié
+de son argent liquide.
+
+[i]À jouer durant le début de son tour, sur un adversaire.[/i]"
+LABEL_CARD_ANARCHY_5_TITLE,"Not yet translated","Finances publiques"
+LABEL_CARD_ANARCHY_5_DESCRIPTION,"Not yet translated","Vous forcez un de vos camarades à passer en mode d'impôsition proportionnel.
+
+Lorsqu'il tombera sur la case Taxes & Impôts il paiera
+une taxe proportionnelle à son patrimoine financier.
+
+[i]À jouer durant le début de son tour, sur un adversaire.[/i]"
+LABEL_CARD_ANARCHY_6_TITLE,"Not yet translated","Décision de justice"
+LABEL_CARD_ANARCHY_6_DESCRIPTION,"Not yet translated","Vous sortez immédiatement de prison.
+
+[i]À jouer durant le début de son tour.[/i]"
+LABEL_CARD_ANARCHY_7_TITLE,"Not yet translated","Finances publiques"
+LABEL_CARD_ANARCHY_7_DESCRIPTION,"Not yet translated","Vous forcez un de vos camarades à passer en mode d'impôsition fixe.
+
+Lorsqu'il tombera sur la case Taxes & Impôts il devra payer
+un montant forfaitaire fixe de [b]$%s[/b].
+
+[i]À jouer durant le début de son tour, sur un adversaire.[/i]"
+LABEL_CARD_ANARCHY_8_TITLE,"Not yet translated","Syndicats"
+LABEL_CARD_ANARCHY_8_DESCRIPTION,"Not yet translated","Il y a une grève des éboueurs sur un côte du plateau. Les loyers de ce bord
+ne rapportent rien jusqu'au prochain tour de plateau.
+
+[i]À jouer durant le début de son tour, sur un côté de plateau.[/i]"
+LABEL_CARD_ANARCHY_9_TITLE,"Not yet translated","Fête de la musique"
+LABEL_CARD_ANARCHY_9_DESCRIPTION,"Not yet translated","Un festival spontanné auto-organise s'invite dans une ville.
+
+[i]À jouer durant le début de son tour, sur une ville.[/i]"
+LABEL_CARD_ANARCHY_10_TITLE,"Not yet translated","Justine TV"
+LABEL_CARD_ANARCHY_10_DESCRIPTION,"Not yet translated","Des streamers connus organisent une campagne à but non-lucratif en votre nom, vous percevez [b]$%s[/b]
+
+[i]À jouer durant le début de son tour.[/i]"
+LABEL_CARD_ANARCHY_11_TITLE,"Not yet translated","Décision d'injustice"
+LABEL_CARD_ANARCHY_11_DESCRIPTION,"Not yet translated","Vous pouvez jouer cette carte pour remttre une Merveille en jeu.
+Le propriétaire perd la merveille instantannément.
+
+[i]À jouer durant le début de son tour, sur une case merveille[/i]"
+LABEL_CARD_RANDOM_0_TITLE,"Not yet translated","Banque"
+LABEL_CARD_RANDOM_0_DESCRIPTION,"Not yet translated","Erreur en votre faveur, la banque vous verse
+des dividendes de [b]$%s[/b]."
+LABEL_CARD_RANDOM_1_TITLE,"Not yet translated","Agence de voyage"
+LABEL_CARD_RANDOM_1_DESCRIPTION,"Not yet translated","Rendez-vous à [b]%s[/b]."
+LABEL_CARD_RANDOM_2_TITLE,"Not yet translated","Agence de voyage"
+LABEL_CARD_RANDOM_2_DESCRIPTION,"Not yet translated","Veuillez reculer de [b]%s[/b] cases"
+LABEL_CARD_RANDOM_3_TITLE,"Not yet translated","Décision de justice"
+LABEL_CARD_RANDOM_3_DESCRIPTION,"Not yet translated","[b]%s[/b] trouve que vous vous en sortez un peu trop bien, il a saisi le tribunal.
+Ce dernier vient de rendre son verdict:
+\tAllez en prison, ne passez pas par la case départ, ne revez pas [b]$%s[/b]!"
+LABEL_CARD_RANDOM_4_TITLE,"Not yet translated","WaterBnB"
+LABEL_CARD_RANDOM_4_DESCRIPTION,"Not yet translated","Vous faites la bamboche, vous amenez tous vos potos,
+le prochain loyer à payer sera doublé."
+LABEL_CARD_RANDOM_5_TITLE,"Not yet translated","Sécurité des territoires"
+LABEL_CARD_RANDOM_5_DESCRIPTION,"Not yet translated","Le prefet de votre région vous aime bien, il met à disposition un régiment de police
+complet pour protéger une de vos rues d'éventuelles catastrophes.
+
+Veuillez choisir la rue à protéger"
+LABEL_CARD_RANDOM_6_TITLE,"Not yet translated","Jouer comporte des risques"
+LABEL_CARD_RANDOM_6_DESCRIPTION,"Not yet translated","Vous jouez en bourse, et ça ne vous réussit pas vraiment.
+
+Vous perdez immédiatement la moitié de vos liquidités, soit [b]$%s[/b]."
+LABEL_CARD_RANDOM_7_TITLE,"Not yet translated","Finances publiques"
+LABEL_CARD_RANDOM_7_DESCRIPTION,"Not yet translated","Vous passez en mode d'impôsition proportionel.
+
+Lorsque vous tomberez sur la case Taxes & Impôts vous paierez
+une taxe proportionnelle à votre patrimoine financier."
+LABEL_CARD_RANDOM_8_TITLE,"Not yet translated","Finances publiques"
+LABEL_CARD_RANDOM_8_DESCRIPTION,"Not yet translated","Vous passez en mode d'impôsition fixe.
+
+Lorsque vous tomberez sur la case Taxes & Impôts vous paierez
+un montant forfaitaire fixe de [b]$%s[/b]."
+LABEL_CARD_RANDOM_9_TITLE,"Not yet translated","Préfet de police"
+LABEL_CARD_RANDOM_9_DESCRIPTION,"Not yet translated","Il y a des manifestations dans [b]%s[/b], cette dernière ne vous
+rapportera rien durant vos deux prochains tours."
+LABEL_CARD_RANDOM_10_TITLE,"Not yet translated","MOVE DA BUS"
+LABEL_CARD_RANDOM_10_DESCRIPTION,"Not yet translated","Une émission de télé-réalité s'est installe dans une de vos villes.
+Ils entament de grands chantiers pour vous construire une maison.
+
+Veuillez sélectionner une ville dans laquelle l'évènement se produira."
+LABEL_CARD_RANDOM_11_TITLE,"Not yet translated","Organisation Mondiale de la Santé"
+LABEL_CARD_RANDOM_11_DESCRIPTION,"Not yet translated","Dû à une épidémie, tous les festivals et autres spectacles sont annulés pendant les 2 prochains tours.
+
+Cela inclut: Les jeux olympiques, les festivals ainsi que les merveilles."
+LABEL_CARD_RANDOM_12_TITLE,"Not yet translated","Les locataires mécontents"
+LABEL_CARD_RANDOM_12_DESCRIPTION,"Not yet translated","Un de vos locataires vous fait faux-bonds, le prochain loyer ne sera pas perçu."
+
